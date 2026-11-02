@@ -71709,7 +71709,7 @@ j=A.HC(m,m,m,B.cs,m,m,!0,m,A.nX(A.b([B.Pa,r,B.P9,A.aoL(A.ay(m,A.bO(A.b([B.Ec,B.b
 s=a?B.aF:B.c1
 s=A.am("Architecting resilient, high-throughput digital platforms across mobile clients and mission-critical cloud backends.",m,m,A.aZ().$3$color$fontSize$height(B.a1,a?18:15,1.6),s)
 r=a?B.aM:B.er
-r=A.jF(r,A.b([n.FI("Mobile Lead: Flutter & Native Bridges",B.bM),n.FI("Backend Architect: Spring Boot & Security",B.bN)],i),B.bI,12,12)
+r=A.jF(r,A.b([n.FI("Mobile Developer: Flutter & Native Bridges",B.bM),n.FI("Backend Developer: Java Spring Boot",B.bN)],i),B.bI,12,12)
 q=a?B.aM:B.er
 return A.bF(A.b([k,B.c0,j,B.c0,s,B.xT,r,B.em,A.jF(q,A.b([A.EH(B.Ea,A.am("Explore Projects",m,m,A.aZ().$2$fontSize$fontWeight(14,B.N),m),new A.adn(n),A.EI(m,m,B.e,m,m,m,m,m,m,B.l,m,m,B.lX,m,new A.bW(A.b6(12),B.p),m,m,m,m,m)),A.Gt(B.mw,A.am("Download CVs",m,m,A.aZ().$2$fontSize$fontWeight(14,B.a8),m),new A.ado(n),A.Gu(m,m,m,m,m,m,m,m,m,B.e,m,m,B.i2,m,new A.bW(A.b6(12),B.p),B.dq,m,m,m,m)),A.Fp(m,m,B.Ds,m,m,new A.adp(n),m,m,A.Xv(m,B.W,m,m,m,m,m,m,m,m,m,m,m,B.f2,B.hx,m,m),"GitHub Profile"),A.Fp(m,m,B.Dp,m,m,new A.adq(n),m,m,A.Xv(m,B.W,m,m,m,m,m,m,m,m,m,m,m,B.f2,B.hx,m,m),"LinkedIn Profile")],i),B.kb,14,14)],i),l,B.t)},
 FA(a){var s=null,r=a==null?380:a,q=A.b6(28),p=A.bZ(B.G,1.5),o=A.b([new A.cT(0,B.c4,B.e.fz(0.08),B.t3,30),new A.cT(0,B.c4,B.l.fz(0.8),B.t4,40)],t.sq),n=A.b6(26),m=A.ayD(s,s,new A.oJ("assets/images/eslam_hegazy.jpg",s,s)),l=A.anz(0,A.ay(s,s,B.k,s,new A.aO(s,s,s,s,s,new A.mY(B.kx,B.kw,B.bC,A.b([B.F,B.F,B.W.fz(0.85),B.W],t.t_),B.GJ,s),B.w),s,s,s,s,s,s,s,s)),k=B.l.fz(0.7),j=A.b6(20),i=A.bZ(B.G,1),h=t.p
