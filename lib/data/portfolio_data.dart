@@ -194,8 +194,8 @@ class PortfolioData {
           'Gamers required sub-second inventory validation, instant digital code fulfillment, and bulletproof payment flows without duplicate charge vulnerabilities or cart race conditions.',
       outcome:
           'Shipped high-converting Flutter mobile app paired with high-throughput Spring Boot services handling rapid flash-sales and real-time inventory allocation.',
-      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.shamy.stores',
-      appStoreUrl: 'https://apps.apple.com/app/shamy-stores/id1615629161',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=co.shopney.shamystores',
+      appStoreUrl: 'https://apps.apple.com/us/app/shamy-stores/id1533831789',
       mobileRole:
           'Engineered the cross-platform Flutter client with intuitive catalog navigation, dynamic cart calculations, instant push notification alerts, and seamless checkout dialogs.',
       mobileArchitecture:
@@ -226,8 +226,8 @@ class PortfolioData {
           '10,000+ Kuwaiti government civil servants required a reliable, ultra-secure mobile and web interface to view official ministerial announcements, job promotions, salaries, and personnel service requests.',
       outcome:
           'Delivered enterprise-grade platform achieving 99.9% uptime during nationwide announcement releases with instant push alerts and verified security compliance.',
-      googlePlayUrl: 'https://play.google.com/store/apps/details?id=kw.gov.csc.diwani',
-      appStoreUrl: 'https://apps.apple.com/app/csc-kw/id1501718049',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=kw.gov.csc.diwani&hl=ar',
+      appStoreUrl: 'https://apps.apple.com/us/app/csc-kw/id1483907307',
       mobileRole:
           'Led development of the Flutter government client, ensuring accessibility, multilingual Arabic/English RTL support, and high-readability UI for thousands of state employees.',
       mobileArchitecture:
@@ -250,16 +250,80 @@ class PortfolioData {
       ],
     ),
     ProjectCaseStudy(
+      id: 'elmatches',
+      title: 'ElMatches',
+      subtitle: 'Real-Time Sports Analytics & Fan Engagement Platform',
+      domain: 'Sports Media & Fan Engagement',
+      problem:
+          'Football fans needed real-time match events, instant player ratings, interactive debate forums, and live prediction games capable of handling intense peak spikes during major tournament derbies.',
+      outcome:
+          'Delivered high-performance sports application with sub-second live score sync, interactive community voting, and seamless cross-platform performance.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.runprof.elmatches',
+      appStoreUrl: 'https://apps.apple.com/us/app/elmatches/id6596777262',
+      mobileRole:
+          'Engineered the responsive Flutter mobile experience featuring dynamic match center widgets, real-time fan sentiment sliders, and instant goal alert notifications.',
+      mobileArchitecture:
+          'Clean Architecture with BLoC and WebSockets for live match telemetry, optimized widget rebuild trees, and persistent offline standings cache.',
+      mobileStack: ['Flutter', 'Dart', 'BLoC', 'WebSockets', 'Hive', 'FCM', 'Dio'],
+      mobileHighlights: [
+        'Real-time WebSocket event streaming delivering goal updates in under 200ms.',
+        'High-efficiency custom painter timeline rendering minute-by-minute match momentum.',
+        'Rich push notifications with rich media previews and quick voting buttons.',
+      ],
+      backendRole:
+          'Developed scalable Spring Boot ingestion services connecting live sports data provider feeds and broadcasting real-time websocket updates.',
+      backendArchitecture:
+          'Event-driven Spring Boot architecture using Redis Pub/Sub to fan-out live match statistics to tens of thousands of active socket clients.',
+      backendStack: ['Java', 'Spring Boot', 'WebSockets / STOMP', 'Redis Pub/Sub', 'PostgreSQL', 'Docker'],
+      backendHighlights: [
+        'Sub-50ms message broadcast latency across massive concurrent user spikes during derby finals.',
+        'Optimized PostgreSQL time-series queries for historic head-to-head match stats.',
+        'Rate-limiting and anti-spam algorithms protecting fan comment sections.',
+      ],
+    ),
+    ProjectCaseStudy(
+      id: 'hwaidak-hotels',
+      title: 'Hwaidak Hotels — Titanic Group',
+      subtitle: 'Luxury Resort Booking & Guest Experience Ecosystem',
+      domain: 'Hospitality & Travel Technology',
+      problem:
+          'Titanic resort guests in Hurghada required an all-in-one mobile concierge for room booking, itinerary management, restaurant reservations, and on-premise service requests with multilingual support.',
+      outcome:
+          'Deployed high-end resort app elevating guest satisfaction ratings, streamlining front-desk workload, and facilitating smooth in-app payments.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.hwaidakhotels.guest',
+      appStoreUrl: 'https://apps.apple.com/us/app/hwaidak-hotels-titanic-group/id6744203258',
+      mobileRole:
+          'Built the Flutter client with elegant luxury visuals, interactive resort maps, multilingual Arabic/English/German support, and smooth booking wizards.',
+      mobileArchitecture:
+          'MVVM with Riverpod state management, cached interactive resort asset maps, and offline digital key passes.',
+      mobileStack: ['Flutter', 'Dart', 'Riverpod', 'CachedNetworkImage', 'Dio', 'FCM', 'PayTabs'],
+      mobileHighlights: [
+        'Bespoke animated luxury UI micro-interactions matching Titanic Hotel branding.',
+        'Dynamic multilingual room service menu with dietary filters and customization notes.',
+        'Offline-capable guest itinerary and activity schedule caching.',
+      ],
+      backendRole:
+          'Integrated property management systems (PMS) with Spring Boot APIs for real-time room availability, billing reconciliation, and concierge dispatching.',
+      backendArchitecture:
+          'Secure Spring Boot gateway handling payment tokenization, reservation locking, and automated guest notification triggers.',
+      backendStack: ['Java', 'Spring Boot', 'Spring Security', 'MySQL', 'PayTabs SDK', 'Docker'],
+      backendHighlights: [
+        'Atomic reservation hold transactions eliminating room double-booking.',
+        'Webhook integrations for automated reservation confirmation SMS and emails.',
+        'Optimized query pipelines reducing seasonal room search response time by 40%.',
+      ],
+    ),
+    ProjectCaseStudy(
       id: 'smou-care',
       title: 'Smou Care',
       subtitle: 'HIPAA-Aligned Digital Healthcare & Diagnostics',
-      domain: 'Telehealth & Clinical Diagnostics',
+      domain: 'Healthcare & Clinical Diagnostics',
       problem:
           'Patients needed a secure way to book specialized at-home medical visits, track clinical sample dispatch in real-time, and download encrypted laboratory diagnostic results while strictly observing healthcare privacy regulations.',
       outcome:
           'Launched production healthcare solution connecting clinics, mobile nurses, and patients with zero HIPAA privacy violations and 50% reduction in crash rates.',
-      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.smoulabs.app',
-      appStoreUrl: 'https://apps.apple.com/app/smou-care/id1639352934',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.nt.smoucare',
+      appStoreUrl: 'https://apps.apple.com/app/smou-care/id6740776462',
       mobileRole:
           'Developed patient Flutter application featuring interactive branch locator maps, dynamic appointment scheduling slots, and encrypted in-app PDF lab result rendering.',
       mobileArchitecture:
@@ -285,13 +349,13 @@ class PortfolioData {
       id: 'mindscape-therapy',
       title: 'MindScape Therapy',
       subtitle: 'End-to-End Encrypted Tele-Psychotherapy System',
-      domain: 'Mental Health & Secure Consultations',
+      domain: 'Healthcare & Mental Health',
       problem:
           'Tele-therapy demands the highest echelon of confidentiality. Patients and licensed psychologists required secure communication, encrypted session notes, and friction-free appointment matching.',
       outcome:
           'Engineered end-to-end encrypted consultation platform providing confidential voice, video, and notes exchange with licensed practitioners.',
-      googlePlayUrl: 'https://play.google.com/store/apps/details?id=app.mindscape.selfimprovement',
-      appStoreUrl: null,
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.mindscape.app&hl=en',
+      appStoreUrl: 'https://apps.apple.com/us/app/mindscape-therapy/id6446362496',
       mobileRole:
           'Built the Flutter therapy application with calm, soothing user interface aesthetics, session booking calendars, and private consultation portals.',
       mobileArchitecture:
@@ -314,25 +378,57 @@ class PortfolioData {
       ],
     ),
     ProjectCaseStudy(
-      id: 'ito-logistics',
-      title: 'iTO & iTO Captain',
-      subtitle: 'Multi-Modal Ride-Hailing, Logistics & Driver Platform',
-      domain: 'Transportation & Last-Mile Logistics',
+      id: 'drug-deal',
+      title: 'Drug Deal',
+      subtitle: 'AI-Powered Medical Encyclopedia & Drug Interaction Engine',
+      domain: 'Healthcare & Pharmacology',
       problem:
-          'Coordinating passenger rides, motorcycle courier express delivery, and furniture-moving heavy freight required sub-second geospatial driver matching, transparent trip fare calculations, and resilient real-time driver tracking.',
+          'Healthcare professionals and patients required instant verification of pharmaceutical drug interactions, dosage recommendations, and active ingredient generic equivalents in emergency and clinical contexts.',
       outcome:
-          'Architected dual-app suite (Rider Client + Driver Captain) operating smoothly across peak city traffic with live telemetry and transparent earnings calculations.',
-      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.itosmart.itocaptandriver',
-      appStoreUrl: null,
+          'Delivered comprehensive pharmaceutical reference app with fast offline search, dosage calculator, and AI-assisted contraindication alerts.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.runprof.drugdeal',
+      appStoreUrl: 'https://apps.apple.com/eg/app/drug-deal/id1565732393',
       mobileRole:
-          'Developed both Flutter apps: iTO for consumer trip booking and iTO Captain for drivers with background location broadcasting, turn-by-turn routing, and live earnings dashboards.',
+          'Architected the Flutter client featuring sub-millisecond local SQLite indexed search, interactive body-system categories, and contraindication warning badges.',
       mobileArchitecture:
-          'Clean Architecture with Riverpod & BLoC state streams, custom battery-optimized location telemetry listener, and resilient WebSocket reconnect logic.',
-      mobileStack: ['Flutter', 'Dart', 'BLoC / Riverpod', 'Google Maps / Polyline', 'WebSockets', 'Geolocator'],
+          'Clean Architecture with BLoC, pre-compiled offline SQLite database with FTS5 full-text indexing, and graceful remote delta synchronizations.',
+      mobileStack: ['Flutter', 'Dart', 'BLoC', 'sqflite (FTS5)', 'Dio', 'SharedPreferences'],
       mobileHighlights: [
-        'Smooth polyline route rendering with car heading rotation and live driver progress.',
-        'Driver battery optimization throttling GPS polling intelligently based on vehicle motion.',
-        'Instant audio-tactile trip dispatch alerts ensuring drivers never miss trip bids.',
+        'Instant offline search across 10,000+ trade and scientific drug names in under 10ms.',
+        'Interactive drug-drug interaction matrix displaying severity indicators and clinical guidance.',
+        'Dark mode optimized for clinical and hospital nighttime on-call shifts.',
+      ],
+      backendRole:
+          'Built medical database management APIs in Spring Boot to ingest updated pharmaceutical circulars and push encrypted delta sync bundles to mobile clients.',
+      backendArchitecture:
+          'Spring Boot microservices paired with PostgreSQL Full-Text Search and automated daily medical data validation jobs.',
+      backendStack: ['Java', 'Spring Boot', 'PostgreSQL', 'Spring Batch', 'Docker'],
+      backendHighlights: [
+        'Automated differential sync pipeline compressing daily updates to under 50KB for mobile download.',
+        'Comprehensive drug classification taxonomy mapped to international WHO ATC standards.',
+        'Optimized batch indexing supporting instant synonym search queries.',
+      ],
+    ),
+    ProjectCaseStudy(
+      id: 'ito-app',
+      title: 'iTO (Ride-Hailing & Logistics)',
+      subtitle: 'Multi-Modal Passenger Ride-Hailing & Freight Delivery',
+      domain: 'Transportation & Logistics',
+      problem:
+          'Urban commuters and businesses required a unified platform for passenger rides, express motorcycle parcel courier dispatch, and heavy furniture-moving logistics with transparent upfront pricing.',
+      outcome:
+          'Created highly reliable on-demand mobility platform facilitating thousands of completed daily trips across various vehicle tiers.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.iTO.app',
+      appStoreUrl: 'https://apps.apple.com/us/app/ito/id6741041097',
+      mobileRole:
+          'Engineered passenger booking Flutter application featuring interactive Google Maps navigation, live vehicle pin tracking, multi-stop trips, and digital wallet top-ups.',
+      mobileArchitecture:
+          'Clean Architecture with Riverpod & BLoC state streams, custom battery-efficient location listener, and resilient WebSocket reconnect logic.',
+      mobileStack: ['Flutter', 'Dart', 'Riverpod', 'Google Maps / Polyline', 'WebSockets', 'Dio'],
+      mobileHighlights: [
+        'Smooth 60 FPS marker interpolation for moving vehicles with heading rotation.',
+        'Multi-point route waypoint routing with automated dynamic fare recalculation.',
+        'Integrated multi-gateway payment processing (Card, Wallet, Cash).',
       ],
       backendRole:
           'Designed scalable backend services handling real-time driver coordinate ingestion, geospatial queries, dynamic fare estimation, and driver payout ledgering.',
@@ -346,16 +442,80 @@ class PortfolioData {
       ],
     ),
     ProjectCaseStudy(
+      id: 'ito-captain',
+      title: 'iTO Captain (Driver & Fleet)',
+      subtitle: 'High-Precision Driver Telemetry & Fleet Dispatch App',
+      domain: 'Transportation & Logistics',
+      problem:
+          'Captains operating cars, motorbikes, and heavy transport trucks required an intuitive, distraction-free driver interface with live GPS telemetry, audio trip bids, and transparent earnings breakdown.',
+      outcome:
+          'Shipped mission-critical driver app with background GPS tracking, battery throttle management, and zero recorded mid-trip disconnections.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.ito.driver',
+      appStoreUrl: 'https://apps.apple.com/eg/app/ito-driver/id6740854493',
+      mobileRole:
+          'Developed driver Flutter application with background location services, automated acceptance countdown timers, in-app navigation, and instant earnings withdrawal requests.',
+      mobileArchitecture:
+          'BLoC architecture paired with native foreground service bridge (Kotlin) for uninterrupted background location reporting.',
+      mobileStack: ['Flutter', 'Dart', 'BLoC', 'Foreground Service', 'Google Maps Native', 'Geolocator'],
+      mobileHighlights: [
+        'Adaptive battery management throttling GPS updates dynamically based on vehicle motion.',
+        'High-contrast night-mode dashboard built for safe behind-the-wheel driver ergonomics.',
+        'Transparent daily earnings and commission settlement summaries.',
+      ],
+      backendRole:
+          'Engineered the driver state machine and trip dispatch engine delivering orders to optimal drivers within sub-second intervals.',
+      backendArchitecture:
+          'Spring Boot cluster with distributed state handling in Redis and Kafka/RabbitMQ trip broadcasting queues.',
+      backendStack: ['Java', 'Spring Boot', 'Redis', 'RabbitMQ', 'MySQL', 'WebSockets'],
+      backendHighlights: [
+        'Real-time heartbeat monitor detecting driver disconnection and initiating failover re-assignment.',
+        'Instant automated commission ledger balancing on every trip completion.',
+        'Sub-100ms driver telemetry ingestion pipeline handling continuous mobile pings.',
+      ],
+    ),
+    ProjectCaseStudy(
+      id: 'egyptian-greece',
+      title: 'Egyptian Greece',
+      subtitle: 'Smart Gated Community & QR Access Control Platform',
+      domain: 'Community & Smart Real Estate',
+      problem:
+          'Compound residents and facility managers needed a modernized security access platform for issuing temporary visitor QR codes, facility reservations, maintenance ticketing, and official community broadcasts.',
+      outcome:
+          'Deployed modern community platform cutting gate check-in delays by 60% and digitizing 100% of resident maintenance and amenity bookings.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.runprof.egyptiangreece',
+      appStoreUrl: 'https://apps.apple.com/eg/app/egyptian-greece/id6450964227',
+      mobileRole:
+          'Created resident Flutter application with dynamic visitor QR badge generation, facility calendar reservations, community news feeds, and push security notices.',
+      mobileArchitecture:
+          'Clean Architecture with Cubit state management, local secure token caching, and real-time gate scanner notification listeners.',
+      mobileStack: ['Flutter', 'Dart', 'Cubit', 'qr_flutter', 'Dio', 'FCM', 'ImagePicker'],
+      mobileHighlights: [
+        'One-tap timed visitor pass generation with instant WhatsApp and SMS share sheets.',
+        'Interactive community service ticketing with camera photo attachments and repair status tracking.',
+        'Multilingual Arabic and English RTL/LTR switching.',
+      ],
+      backendRole:
+          'Built Spring Boot security gate APIs validating incoming QR codes in real time, managing resident household accounts, and dispatching gate alerts.',
+      backendArchitecture:
+          'Spring Boot REST APIs with Spring Security JWT tokens, Redis cache for instant QR validity checks, and PostgreSQL database.',
+      backendStack: ['Java', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'Redis', 'Docker'],
+      backendHighlights: [
+        'Sub-50ms QR validation response time at security guard barrier gates.',
+        'Automated expiration of visitor access passes eliminating unauthorized re-entry.',
+        'Comprehensive audit log tracing every gate entry and exit event.',
+      ],
+    ),
+    ProjectCaseStudy(
       id: 'puricom-egypt',
       title: 'Puricom Egypt',
       subtitle: 'IoT-Ready Water Purification Equipment & Service Ecosystem',
-      domain: 'Smart Utilities & Enterprise Field Service',
+      domain: 'Smart Utilities & Field Service',
       problem:
           'Ensuring genuine filter cartridge authenticity, tracking periodic maintenance schedules for enterprise water systems, and providing instant QR verification across industrial units.',
       outcome:
           'Delivered end-to-end QR/serial verification and automated service contract maintenance booking with PCI-DSS aligned payment handling.',
-      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.runprof.puricomegypt',
-      appStoreUrl: 'https://apps.apple.com/app/puricom-egypt/id1552554707',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.runprof.puricomegypt&hl=en',
+      appStoreUrl: 'https://apps.apple.com/eg/app/puricom-egypt/id1551475189',
       mobileRole:
           'Created Flutter client with instant camera QR scanning, warranty status inspection, filter replacement countdown indicators, and technician dispatch booking.',
       mobileArchitecture:
@@ -375,6 +535,70 @@ class PortfolioData {
         'PCI-DSS compliant payment processing for recurring water filter subscription packages.',
         'Automated scheduled cron jobs evaluating warranty expiration dates and dispatching service alerts.',
         'Query optimization cutting barcode verification response times by 35%.',
+      ],
+    ),
+    ProjectCaseStudy(
+      id: 'home-food-plus',
+      title: 'Home Food Plus Captain',
+      subtitle: 'Real-Time Food Delivery Dispatch & Courier Earnings App',
+      domain: 'Food Delivery & Logistics',
+      problem:
+          'Home-cooked food delivery couriers required an efficient mobile application for receiving dispatched meal orders, navigating to home kitchens and customers, and tracking cash collections and tips.',
+      outcome:
+          'Shipped resilient courier app reducing delivery hand-off times and empowering drivers with clear order instructions and real-time earnings tracking.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.runprof.homefoodpluscaptain',
+      appStoreUrl: 'https://apps.apple.com/us/app/home-food-plus-captain/id6451399703',
+      mobileRole:
+          'Engineered courier Flutter application featuring real-time order accept/reject modals, live turn-by-turn routing, customer call masking, and digital delivery confirmations.',
+      mobileArchitecture:
+          'Clean Architecture with BLoC, audio player notifications for incoming orders, and resilient network retry interceptors.',
+      mobileStack: ['Flutter', 'Dart', 'BLoC', 'Google Maps API', 'AudioPlayer', 'Dio', 'FCM'],
+      mobileHighlights: [
+        'Audible and haptic alerts waking the screen when high-priority meal orders are ready.',
+        'Order status state machine with one-tap kitchen arrival, pickup confirmation, and drop-off.',
+        'Detailed daily reconciliation ledger showing cash collected versus in-app earnings.',
+      ],
+      backendRole:
+          'Architected the dispatch matching service coordinating orders between home-kitchen cooks and nearby delivery captains.',
+      backendArchitecture:
+          'Spring Boot microservice layer utilizing Redis for courier spatial matching and PostgreSQL for order lifecycle tracking.',
+      backendStack: ['Java', 'Spring Boot', 'Redis GEO', 'PostgreSQL', 'Spring WebSocket'],
+      backendHighlights: [
+        'Proximity-based dispatch algorithm assigning couriers within a 3km radius in seconds.',
+        'Idempotent delivery completion hooks preventing accounting discrepancies.',
+        'Real-time customer tracking endpoint updating delivery arrival countdowns.',
+      ],
+    ),
+    ProjectCaseStudy(
+      id: 'royal-link',
+      title: 'Royal Link',
+      subtitle: 'High-Throughput Clinical Exchange & Medical Network',
+      domain: 'Healthcare & Hospital Networks',
+      problem:
+          'Diagnostic laboratories, hospitals, and independent medical clinics required a unified digital network for transferring high-volume diagnostic orders, patient test results, and secure billing clearances without latency.',
+      outcome:
+          'Engineered mission-critical medical platform linking multiple regional labs with zero data transmission failures and optimized database performance.',
+      googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.nt.royallink',
+      appStoreUrl: 'https://apps.apple.com/us/app/royal-link/id6740776946',
+      mobileRole:
+          'Developed clinical portal Flutter application enabling medical directors and lab technicians to track specimen pipelines, approve urgent result releases, and review analytics dashboards.',
+      mobileArchitecture:
+          'Clean Architecture with BLoC, strict session timeout controls, and encrypted offline report caches.',
+      mobileStack: ['Flutter', 'Dart', 'BLoC', 'FlChart', 'Dio', 'Biometric Auth', 'Secure Storage'],
+      mobileHighlights: [
+        'Interactive diagnostic volume charts visualizing clinical throughput across hospital branches.',
+        'Instant push alerts for critical lab values (panic results) requiring physician attention.',
+        'Strict biometric session lock ensuring HIPAA patient confidentiality.',
+      ],
+      backendRole:
+          'Architected high-throughput Spring Boot backend handling HL7/FHIR medical data exchange, laboratory instrumentation integration, and relational database partitioning.',
+      backendArchitecture:
+          'Spring Boot microservices with Spring Data JPA/Hibernate, PostgreSQL table partitioning, and Redis caching for rapid clinical lookups.',
+      backendStack: ['Java', 'Spring Boot', 'Spring Data JPA', 'PostgreSQL', 'Redis', 'Docker'],
+      backendHighlights: [
+        'PostgreSQL table partitioning and indexing handling millions of annual test records without degradation.',
+        'Multi-tenant security architecture ensuring absolute isolation between competing laboratory networks.',
+        'High-performance batch processing jobs reconciling daily clinical invoicing.',
       ],
     ),
   ];

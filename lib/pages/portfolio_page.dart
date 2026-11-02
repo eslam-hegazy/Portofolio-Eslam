@@ -59,9 +59,15 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   Future<void> _launchUrl(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    try {
+      final uri = Uri.parse(url);
+      await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+        webOnlyWindowName: '_blank',
+      );
+    } catch (e) {
+      debugPrint('Error launching URL $url: $e');
     }
   }
 
@@ -1320,7 +1326,53 @@ class _PortfolioPageState extends State<PortfolioPage> {
                     ),
                   ),
                 ),
-                const SizedBox(width: 8),
+                if (project.googlePlayUrl != null) ...[
+                  const SizedBox(width: 6),
+                  InkWell(
+                    onTap: () => _launchUrl(project.googlePlayUrl!),
+                    borderRadius: BorderRadius.circular(10),
+                    child: Tooltip(
+                      message: 'Open in Google Play',
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: AppTheme.surfaceElevated,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: AppTheme.borderLight),
+                        ),
+                        child: const FaIcon(
+                          FontAwesomeIcons.googlePlay,
+                          size: 14,
+                          color: AppTheme.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+                if (project.appStoreUrl != null) ...[
+                  const SizedBox(width: 6),
+                  InkWell(
+                    onTap: () => _launchUrl(project.appStoreUrl!),
+                    borderRadius: BorderRadius.circular(10),
+                    child: Tooltip(
+                      message: 'Open in App Store',
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: AppTheme.surfaceElevated,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: AppTheme.borderLight),
+                        ),
+                        child: const FaIcon(
+                          FontAwesomeIcons.appStoreIos,
+                          size: 14,
+                          color: AppTheme.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+                const SizedBox(width: 6),
                 InkWell(
                   onTap: () => CaseStudyModal.show(
                     context,
@@ -1328,20 +1380,20 @@ class _PortfolioPageState extends State<PortfolioPage> {
                     initialIsBackend: true,
                   ),
                   borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 10,
-                    ),
-                    decoration: BoxDecoration(
-                      color: AppTheme.surfaceElevated,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: AppTheme.borderLight),
-                    ),
-                    child: const Icon(
-                      Icons.dns_rounded,
-                      size: 16,
-                      color: AppTheme.white,
+                  child: Tooltip(
+                    message: 'Backend Architecture',
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: AppTheme.surfaceElevated,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: AppTheme.borderLight),
+                      ),
+                      child: const Icon(
+                        Icons.dns_rounded,
+                        size: 16,
+                        color: AppTheme.white,
+                      ),
                     ),
                   ),
                 ),
