@@ -40,7 +40,7 @@ const RESOURCES = {"assets/assets/images/eslam_hegazy.jpg": "44d6efa1f283ddbb4cf
 "index.html": "790647a40dc775e15de0a80e281130ff",
 "/": "790647a40dc775e15de0a80e281130ff",
 "version.json": "af41aa1a88ba92403252b15c7ac52805",
-"flutter_bootstrap.js": "896416b8df66e965fb794582def8949e"};
+"flutter_bootstrap.js": "9f04f0eb7ed89b914485c534974e807e"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
