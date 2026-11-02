@@ -8,7 +8,9 @@ class AppTheme {
   static const Color surfaceCard = Color(0xFF171717);
 
   // Border Accents
-  static const Color borderLight = Color(0x2EFFFFFF); // Crisp subtle white border
+  static const Color borderLight = Color(
+    0x2EFFFFFF,
+  ); // Crisp subtle white border
   static const Color borderSubtle = Color(0x1AFFFFFF);
   static const Color borderGlow = Color(0x66FFFFFF); // Bright white glow border
 
@@ -22,8 +24,8 @@ class AppTheme {
   static const Color gray900 = Color(0xFF18181B);
 
   // Tasteful Subtle Accent Colors (Mixed into Badges and Indicator highlights)
-  static const Color mobileCyan = Color(0xFF38BDF8);       // Crisp Cyber Sky
-  static const Color backendEmerald = Color(0xFF34D399);    // Crisp Emerald
+  static const Color mobileCyan = Color(0xFF38BDF8); // Crisp Cyber Sky
+  static const Color backendEmerald = Color(0xFF34D399); // Crisp Emerald
   static const Color springGreen = Color(0xFF4ADE80);
   static const Color accentPurple = Color(0xFFA855F7);
 
@@ -48,7 +50,7 @@ class AppTheme {
     colors: [Color(0xFFFFFFFF), Color(0xFF34D399)],
   );
 
-  // Text Colors
+  //// Text Colors
   static const Color textPrimary = Color(0xFFFFFFFF);
   static const Color textSecondary = Color(0xFFD4D4D8);
   static const Color textMuted = Color(0xFFA1A1AA);
@@ -64,11 +66,9 @@ class AppTheme {
     return BoxDecoration(
       color: color ?? const Color(0xFF121212).withValues(alpha: 0.9),
       borderRadius: BorderRadius.circular(borderRadius),
-      border: Border.all(
-        color: borderColor ?? borderLight,
-        width: borderWidth,
-      ),
-      boxShadow: shadows ??
+      border: Border.all(color: borderColor ?? borderLight, width: borderWidth),
+      boxShadow:
+          shadows ??
           [
             BoxShadow(
               color: Colors.black.withValues(alpha: 0.7),
