@@ -291,7 +291,7 @@ class PortfolioData {
       outcome:
           'Engineered end-to-end encrypted consultation platform providing confidential voice, video, and notes exchange with licensed practitioners.',
       googlePlayUrl: 'https://play.google.com/store/apps/details?id=app.mindscape.selfimprovement',
-      appStoreUrl: 'https://apps.apple.com/app/mindscape-therapy/id1620000000',
+      appStoreUrl: null,
       mobileRole:
           'Built the Flutter therapy application with calm, soothing user interface aesthetics, session booking calendars, and private consultation portals.',
       mobileArchitecture:
@@ -323,7 +323,7 @@ class PortfolioData {
       outcome:
           'Architected dual-app suite (Rider Client + Driver Captain) operating smoothly across peak city traffic with live telemetry and transparent earnings calculations.',
       googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.itosmart.itocaptandriver',
-      appStoreUrl: 'https://apps.apple.com/app/ito-smart/id1628100000',
+      appStoreUrl: null,
       mobileRole:
           'Developed both Flutter apps: iTO for consumer trip booking and iTO Captain for drivers with background location broadcasting, turn-by-turn routing, and live earnings dashboards.',
       mobileArchitecture:
