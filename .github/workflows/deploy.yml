@@ -33,7 +33,10 @@ jobs:
         run: flutter pub get
 
       - name: Build Web
-        run: flutter build web --release --base-href "/Portofolio-Eslam/"
+        run: flutter build web --release
+
+      - name: Add .nojekyll
+        run: touch ./build/web/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
