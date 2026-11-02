@@ -449,11 +449,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
           alignment: isDesktop ? WrapAlignment.start : WrapAlignment.center,
           children: [
             _buildSpecializationTag(
-              'Mobile Lead: Flutter & Native Bridges',
+              'Mobile Developer: Flutter & Native Bridges',
               AppTheme.mobileCyan,
             ),
             _buildSpecializationTag(
-              'Backend Architect: Spring Boot & Security',
+              'Backend Developer: Java Spring Boot',
               AppTheme.backendEmerald,
             ),
           ],
