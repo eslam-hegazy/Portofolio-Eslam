@@ -328,7 +328,7 @@ case 2:s=A.b([r],t.s)
 break
 default:s=null}return s},
 aBB(){var s=A.dU().b,r=s==null?null:s.canvasKitVariant
-s=A.aE0(A.aw0(B.Gg,r==null?"auto":r))
+s=A.aE0(A.aw0(B.Gf,r==null?"auto":r))
 return new A.a_(s,new A.aga(),A.U(s).h("a_<1,A>"))},
 aDl(a,b){return b+a},
 Ri(){var s=0,r=A.M(t.m),q,p,o,n
@@ -18840,7 +18840,7 @@ if(a.as!==q)return q?-1:1
 return 0},
 avS(a,b){var s=A.U(b).h("a_<1,cV>")
 s=A.X(new A.a_(b,new A.UZ(),s),s.h("ap.E"))
-return A.avh(!0,s,a,B.GE,!0,B.BY,null)},
+return A.avh(!0,s,a,B.GD,!0,B.BY,null)},
 avQ(a){a.bj()
 a.aQ(A.aqL())},
 uZ(a){var s=a.a,r=s instanceof A.mv?s:null
@@ -19414,7 +19414,7 @@ _.as=!0
 _.at=!1
 _.$ti=d},
 XQ(a,b){var s
-if(a.i(0,b))return new A.Dw(B.GG)
+if(a.i(0,b))return new A.Dw(B.GF)
 s=A.b([],t.fJ)
 A.bp("debugDidFindAncestor")
 a.kp(new A.XR(b,A.at(t.u),s))
@@ -25448,7 +25448,7 @@ i.push(f)}b4.fontVariations=i}return $.aY.aJ().TextStyle(b4)},
 $S:88}
 A.Te.prototype={
 DA(a,b,c,d){var s,r,q,p
-if(a<0||b<0)return B.GF
+if(a<0||b<0)return B.GE
 s=this.a
 s===$&&A.a()
 s=s.a
@@ -29095,7 +29095,7 @@ if(r.f!==B.mh){r.f=B.mh
 r.Ix()}}return r.d.a.QR(a)},
 Ix(){var s,r
 for(s=this.w,r=0;r<s.length;++r)s[r].$1(this.f)},
-QO(a){if(B.b.n(B.Gu,a))return this.f===B.f8
+QO(a){if(B.b.n(B.Gt,a))return this.f===B.f8
 return!1}}
 A.Vv.prototype={
 $0(){return new A.f8(Date.now(),0,!1)},
@@ -34523,7 +34523,7 @@ if(o>0)return s
 return null}}
 A.a8L.prototype={
 D(a,b){this.Gi(b,0,b.length,!1)},
-b0(){this.Gi(B.Gx,0,0,!0)}}
+b0(){this.Gi(B.Gw,0,0,!0)}}
 A.afL.prototype={
 Gi(a,b,c,d){var s=this.b.a7L(a,b,c,d)
 if(s!=null)this.a.kN(s,0,s.length,d)}}
@@ -40447,7 +40447,7 @@ n=o.e
 o=o.cx
 r=q.ga0Y()
 q.a.toString
-return new A.yU(p,p,p,new A.aca(),p,p,p,p,p,n,B.J4,p,p,p,B.GJ,q.ga14(),o,p,B.Q8,s,p,r,p,p,B.mH,!1,!1,p,p,p,new A.mG(q,t.bT))},
+return new A.yU(p,p,p,new A.aca(),p,p,p,p,p,n,B.J4,p,p,p,B.GI,q.ga14(),o,p,B.Q8,s,p,r,p,p,B.mH,!1,!1,p,p,p,new A.mG(q,t.bT))},
 J(a){var s,r=null,q=A.pi(!1,!1,this.W9(a),r,r,r,r,!0,r,r,r,new A.acb(),r,r)
 this.a.toString
 s=this.d
@@ -40553,7 +40553,7 @@ A.r9.prototype={
 G(){return"_CornerId."+this.b}}
 A.jJ.prototype={}
 A.pL.prototype={
-iE(){var s,r,q=this,p=A.aCH(B.Gm,new A.a0g(q,q.b.gb_().a3(0,q.a.gb_()))),o=q.a
+iE(){var s,r,q=this,p=A.aCH(B.Gl,new A.a0g(q,q.b.gb_().a3(0,q.a.gb_()))),o=q.a
 o.toString
 s=p.a
 o=q.mb(o,s)
@@ -42821,7 +42821,7 @@ r.e=s.a.a
 r.f=s.d},
 $S:0}
 A.FZ.prototype={
-J(a){return A.anK(new A.oY(B.Bk,null,null),B.a6,new A.pJ(1,B.GS,new A.bW(B.yR,B.p)),this.c.O(0,new A.i(0,40.95)),1.25,B.NE)}}
+J(a){return A.anK(new A.oY(B.Bk,null,null),B.a6,new A.pJ(1,B.GR,new A.bW(B.yR,B.p)),this.c.O(0,new A.i(0,40.95)),1.25,B.NE)}}
 A.n2.prototype={
 G(){return"MaterialType."+this.b}}
 A.vZ.prototype={
@@ -43267,7 +43267,7 @@ ghv(){return A.aED()},
 LU(a,b,c,d,e,f){return A.auZ(a,b,c,d,e,f)}}
 A.Gw.prototype={
 Vx(a){var s=t.Tr
-s=A.X(new A.a_(B.Gl,new A.a1q(a),s),s.h("ap.E"))
+s=A.X(new A.a_(B.Gk,new A.a1q(a),s),s.h("ap.E"))
 return s},
 i(a,b){if(b==null)return!1
 if(this===b)return!0
@@ -47778,7 +47778,7 @@ s=p==null?null:A.ao6(p)
 if(s==null||r.gfs().i(0,B.i))return s
 return new A.mH(s.a.cN(r.gfs()),s.b,s.c)},
 Au(){var s,r,q=this.b,p=q.gfs()
-if(!isFinite(p.a)||!isFinite(p.b))return B.GH
+if(!isFinite(p.a)||!isFinite(p.b))return B.GG
 s=q.f
 if(s==null){s=q.a.c.Au()
 q.f=s}if(p.i(0,B.i))r=s
@@ -51002,7 +51002,7 @@ q=a.a3(0,s.gfs())
 r=r.a
 r===$&&A.a()
 p=r.a.getGlyphPositionAtCoordinate(q.a,q.b)
-o=B.G8[J.a1(p.affinity.value)]
+o=B.G7[J.a1(p.affinity.value)]
 return new A.as(J.a1(p.pos),o)},
 jr(a){this.jH(t.k.a(A.t.prototype.gX.call(this)))
 return this.A.b.a.c.jr(a)},
@@ -55723,7 +55723,7 @@ break
 case 1:return A.K(q,r)}})
 return A.L($async$yn,r)},
 Ye(a,b){var s,r,q,p
-if(a===b)return B.GD
+if(a===b)return B.GC
 s=A.b([],t.QP)
 if(a==null)s.push(b)
 else{r=B.b.k6(B.dU,a)
@@ -57158,7 +57158,7 @@ A.kV.prototype={}
 A.GU.prototype={
 j8(a,b){var s,r,q,p,o,n=$.af.af$.d.c
 if(n==null||n.e==null)return!1
-for(s=t.R,r=0;r<2;++r){q=B.Gv[r]
+for(s=t.R,r=0;r<2;++r){q=B.Gu[r]
 p=n.e
 p.toString
 o=A.ahQ(p,q,s)
@@ -57261,7 +57261,7 @@ this.iL()}}
 A.r7.prototype={
 j(a){return"Entry#"+A.bk(this)+"("+this.d.j(0)+")"}}
 A.tv.prototype={
-ag(){return new A.JM(A.at(t.me),B.GI,null,null)},
+ag(){return new A.JM(A.at(t.me),B.GH,null,null)},
 acn(a,b){return A.aqs().$2(a,b)},
 aal(a,b){return A.aD1().$2(a,b)}}
 A.JM.prototype={
@@ -61010,7 +61010,7 @@ if(b==null)return!1
 if(J.P(b)!==A.q(s))return!1
 return b instanceof A.c1&&b.a===s.a&&b.b==s.b&&b.c==s.c&&b.d===s.d&&A.co(null,null)},
 gu(a){var s=this
-return A.O(s.a,s.b,s.c,s.d,A.bu(B.Gy),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
+return A.O(s.a,s.b,s.c,s.d,A.bu(B.Gx),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
 j(a){return"IconData(U+"+B.d.qF(B.j.kk(this.a,16).toUpperCase(),5,"0")+")"}}
 A.mM.prototype={
 bY(a){return!this.w.i(0,a.w)},
@@ -62046,7 +62046,7 @@ g=s&&d
 b=s?d:b.ch
 if(b==null)b=B.e7
 s=s&&d
-f=new A.w5(a,a1,q,p,m,o,n,a0,g===!0,l,k,h,c,j,i,b,new A.p6(d),B.GB,s===!0)
+f=new A.w5(a,a1,q,p,m,o,n,a0,g===!0,l,k,h,c,j,i,b,new A.p6(d),B.GA,s===!0)
 if(!f.i(0,e.e))e.al(new A.acs(e,f))},
 Mu(){this.pe()},
 Mw(){if(this.d==null)this.pe()},
@@ -62333,7 +62333,7 @@ r.N(0,s.Pe(null,l))
 l.a.toString
 q=r.a
 p=0
-for(;!1;++p){o=B.Gz[p]
+for(;!1;++p){o=B.Gy[p]
 n=l.c
 n.toString
 m=new A.fw(o.AF(n),null,!0,B.kj,B.bq,new A.ot(new ($.Rz())(B.bq)),B.bq)
@@ -62686,7 +62686,7 @@ J(a){var s,r,q=this,p=null,o=q.ga_a(),n=A.pj(a),m=q.br$,l=q.d
 l===$&&A.a()
 s=q.a.ay
 if(l.gbG()==null){r=q.gFl()
-r=J.pA(r.slice(0),A.U(r).c)}else r=B.GA
+r=J.pA(r.slice(0),A.U(r).c)}else r=B.Gz
 return new A.mK(p,new A.dk(new A.a16(q,a),A.vR(B.bc,new A.CX(!1,A.ail(A.pi(!0,p,A.a7z(m,new A.pU(r,s,l)),p,p,p,q.y,!1,p,p,p,p,p,!0),n),p),o,q.ga1n(),p,p,o),p,t.w3),p)}}
 A.a15.prototype={
 $1(a){var s=this.a.c
@@ -68541,7 +68541,7 @@ r.tK()
 return s.aD()},
 l(){var s,r,q,p,o=this
 for(s=o.b,r=s.length,q=o.gyp(),p=0;p<s.length;s.length===r||(0,A.C)(s),++p)s[p].I(q)
-o.b=B.GC
+o.b=B.GB
 o.y=!1
 o.dW()},
 cb(a,b){return a.de(b)},
@@ -71699,7 +71699,7 @@ r=a?B.aM:B.ep
 r=A.jF(r,A.b([n.FI("Mobile Lead: Flutter & Native Bridges",B.bN),n.FI("Backend Architect: Spring Boot & Security",B.bO)],i),B.bJ,12,12)
 q=a?B.aM:B.ep
 return A.bF(A.b([k,B.c0,j,B.c0,s,B.xR,r,B.ek,A.jF(q,A.b([A.EH(B.E8,A.am("Explore Projects",m,m,A.aZ().$2$fontSize$fontWeight(14,B.N),m),new A.adm(n),A.EI(m,m,B.e,m,m,m,m,m,m,B.k,m,m,B.lX,m,new A.bW(A.b9(12),B.p),m,m,m,m,m)),A.Gt(B.mu,A.am("Download CVs",m,m,A.aZ().$2$fontSize$fontWeight(14,B.a8),m),new A.adn(n),A.Gu(m,m,m,m,m,m,m,m,m,B.e,m,m,B.i2,m,new A.bW(A.b9(12),B.p),B.dn,m,m,m,m)),A.Fp(m,m,B.Do,m,m,new A.ado(n),m,m,A.Xv(m,B.Z,m,m,m,m,m,m,m,m,m,m,m,B.f1,B.hx,m,m),"GitHub Profile"),A.Fp(m,m,B.Dn,m,m,new A.adp(n),m,m,A.Xv(m,B.Z,m,m,m,m,m,m,m,m,m,m,m,B.f1,B.hx,m,m),"LinkedIn Profile")],i),B.kb,14,14)],i),l,B.t)},
-FA(a){var s=null,r=a==null?380:a,q=A.b9(28),p=A.cc(B.G,1.5),o=A.b([new A.cT(0,B.c4,B.e.fz(0.08),B.t1,30),new A.cT(0,B.c4,B.k.fz(0.8),B.t2,40)],t.sq),n=A.b9(26),m=A.ayA(s,s,new A.oI("assets/images/eslam_hegazy.jpg",s,s)),l=A.anw(0,A.az(s,s,B.l,s,new A.aS(s,s,s,s,s,new A.mX(B.kx,B.kw,B.bD,A.b([B.F,B.F,B.Z.fz(0.85),B.Z],t.t_),B.Gr,s),B.w),s,s,s,s,s,s,s,s)),k=B.k.fz(0.7),j=A.b9(20),i=A.cc(B.G,1),h=t.p
+FA(a){var s=null,r=a==null?380:a,q=A.b9(28),p=A.cc(B.G,1.5),o=A.b([new A.cT(0,B.c4,B.e.fz(0.08),B.t1,30),new A.cT(0,B.c4,B.k.fz(0.8),B.t2,40)],t.sq),n=A.b9(26),m=A.ayA(s,s,new A.oI("assets/images/eslam_hegazy.jpg",s,s)),l=A.anw(0,A.az(s,s,B.l,s,new A.aS(s,s,s,s,s,new A.mX(B.kx,B.kw,B.bD,A.b([B.F,B.F,B.Z.fz(0.85),B.Z],t.t_),B.Gq,s),B.w),s,s,s,s,s,s,s,s)),k=B.k.fz(0.7),j=A.b9(20),i=A.cc(B.G,1),h=t.p
 return A.az(s,new A.DM(n,A.bF(A.b([A.nR(B.cB,A.b([new A.vn(m,1/0,r*1.05,B.cE,B.kx,s),l,A.q1(s,A.az(s,A.bO(A.b([A.az(s,s,B.l,s,B.kE,s,8,s,s,s,s,s,8),B.h1,A.am("Available for Hire",s,s,A.aZ().$3$color$fontSize$fontWeight(B.e,11,B.a8),s)],h),B.y,B.C,B.av),B.l,s,new A.aS(k,s,i,j,s,s,B.w),s,s,s,s,B.Cs,s,s,s),s,s,s,16,16,s)],h),B.a6,B.cq),new A.bC(B.CH,A.bF(A.b([A.bO(A.b([A.am("Eslam Hegazy",s,s,A.e5().$3$color$fontSize$fontWeight(B.e,20,B.N),s),B.d9,B.E4],h),B.y,B.C,B.t),B.el,A.am("Cairo, Egypt \u2022 Mobile & Backend Architecture",s,s,A.aZ().$2$color$fontSize(B.a1,12),s)],h),B.B,B.t),s)],h),B.dE,B.av),s),B.l,s,new A.aS(B.Z,s,p,q,o,s,B.w),s,s,s,s,s,s,s,r)},
 VT(){return this.FA(null)},
 FI(a,b){var s=null,r=A.b9(10),q=A.cc(B.G,1)
@@ -71724,7 +71724,7 @@ case"shield":return B.DY
 case"cloud":return B.DL
 case"credit-card":return B.DT
 default:return B.DS}},
-W2(a,b){var s,r=this,q=null,p=t.b5,o=A.X(new A.ay(B.G7,new A.adB(r),p),p.h("r.E"))
+W2(a,b){var s,r=this,q=null,p=t.b5,o=A.X(new A.ay(B.GY,new A.adB(r),p),p.h("r.E"))
 p=a?80:24
 s=t.p
 return A.az(q,A.eH(A.az(q,A.bF(A.b([r.ot("Select any project to explore the dual mobile client & backend systems architecture.","VERIFIED CONTRIBUTIONS","Featured Projects & Case Studies"),B.c0,A.jF(B.aM,A.b([r.rO("All Projects","all"),r.rO("FinTech & E-Commerce","fintech"),r.rO("Healthcare & Clinical","healthcare"),r.rO("Enterprise & Government","enterprise")],s),B.bJ,10,10),B.ek,A.aiH(new A.adC(r,a,b,o))],s),B.B,B.t),B.l,B.cD,q,q,q,q,q,q,q,q,q),q,q),B.l,q,q,q,q,r.w,q,new A.W(p,80,p,80),q,q,q)},
@@ -71876,7 +71876,7 @@ A.adj.prototype={
 $2(a,b){return B.c0},
 $S:472}
 A.adi.prototype={
-$2(a,b){return this.a.VP(B.GX[b],this.b)},
+$2(a,b){return this.a.VP(B.GW[b],this.b)},
 $S:66}
 A.adg.prototype={
 $1(a){var s=null
@@ -71939,25 +71939,26 @@ case 2:s=5
 return A.Q(A.Rm(q,B.mD),$async$m8)
 case 5:case 3:return A.K(null,r)}})
 return A.L($async$m8,r)},
-J(a){var s,r,q,p,o,n,m=this,l=null,k=m.a.c,j=A.bM(a,l,t.w).w.a.a<768,i=j?16:40,h=j?24:32,g=A.lY(B.G,24,B.l_),f=A.b9(20),e=A.cc(B.G,1),d=t.p
-f=A.bO(A.b([A.az(l,A.am(k.d,l,l,A.aZ().$3$color$fontSize$fontWeight(B.as,12,B.a8),l),B.l,l,new A.aS(B.Z,l,e,f,l,l,B.w),l,l,l,l,B.i_,l,l,l),B.d9,A.Fp(l,l,B.mv,l,l,new A.a9A(a),l,20,l,l)],d),B.y,B.C,B.t)
-e=A.am(k.b,l,l,A.e5().$4$color$fontSize$fontWeight$letterSpacing(B.e,j?24:30,B.N,-0.5),l)
-s=A.am(k.c,l,l,A.aZ().$2$color$fontSize(B.a1,15),l)
-r=m.FF(B.e,k.e,B.DN,"The Challenge & Problem")
-q=m.FF(B.lm,k.f,B.DO,"Verified Engineering Outcome")
+J(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.a.c,i=A.bM(a,k,t.w).w.a.a<768,h=i?16:40,g=i?24:32,f=A.lY(B.G,24,B.l_),e=A.b9(20),d=A.cc(B.G,1),c=t.p
+e=A.bO(A.b([A.az(k,A.am(j.d,k,k,A.aZ().$3$color$fontSize$fontWeight(B.as,12,B.a8),k),B.l,k,new A.aS(B.Z,k,d,e,k,k,B.w),k,k,k,k,B.i_,k,k,k),B.d9,A.Fp(k,k,B.mv,k,k,new A.a9A(a),k,20,k,k)],c),B.y,B.C,B.t)
+d=A.am(j.b,k,k,A.e5().$4$color$fontSize$fontWeight$letterSpacing(B.e,i?24:30,B.N,-0.5),k)
+s=A.am(j.c,k,k,A.aZ().$2$color$fontSize(B.a1,15),k)
+r=l.FF(B.e,j.e,B.DN,"The Challenge & Problem")
+q=l.FF(B.lm,j.f,B.DO,"Verified Engineering Outcome")
 p=A.b9(16)
 o=A.cc(B.G,1)
-n=m.d
+n=l.d
 n===$&&A.a()
-p=A.az(l,A.bO(A.b([A.dh(m.FE(B.bN,B.cP,!n,"Mobile Perspective (Flutter)",new A.a9B(m)),1),B.h1,A.dh(m.FE(B.bO,B.dQ,m.d,"Backend Perspective (Java / Spring)",new A.a9C(m)),1)],d),B.y,B.C,B.t),B.l,l,new A.aS(B.Z,l,o,p,l,l,B.w),l,l,l,l,B.lY,l,l,l)
-o=m.d?m.VM(k):m.VU(k)
-n=A.b([],d)
-n.push(A.Gt(B.Dp,B.SM,new A.a9D(m,k),A.Gu(l,l,l,l,l,l,l,l,l,B.e,l,l,B.lV,l,l,B.dn,l,l,l,l)))
-n.push(B.jO)
-n.push(A.Gt(B.Dm,B.SL,new A.a9E(m,k),A.Gu(l,l,l,l,l,l,l,l,l,B.e,l,l,B.lV,l,l,B.dn,l,l,l,l)))
+p=A.az(k,A.bO(A.b([A.dh(l.FE(B.bN,B.cP,!n,"Mobile Perspective (Flutter)",new A.a9B(l)),1),B.h1,A.dh(l.FE(B.bO,B.dQ,l.d,"Backend Perspective (Java / Spring)",new A.a9C(l)),1)],c),B.y,B.C,B.t),B.l,k,new A.aS(B.Z,k,o,p,k,k,B.w),k,k,k,k,B.lY,k,k,k)
+o=l.d?l.VM(j):l.VU(j)
+n=A.b([],c)
+n.push(A.Gt(B.Dp,B.SM,new A.a9D(l,j),A.Gu(k,k,k,k,k,k,k,k,k,B.e,k,k,B.lV,k,k,B.dn,k,k,k,k)))
+m=j.w!=null
+if(m)n.push(B.jO)
+if(m)n.push(A.Gt(B.Dm,B.SL,new A.a9E(l,j),A.Gu(k,k,k,k,k,k,k,k,k,B.e,k,k,B.lV,k,k,B.dn,k,k,k,k)))
 n.push(B.d9)
-n.push(A.azB(B.E3,B.SK,new A.a9F(a),A.aji(l,l,l,l,l,l,l,l,l,B.e,l,l,l,l,l,l,l,l,l,l)))
-return A.alU(B.F,A.az(l,A.bF(A.b([new A.bC(B.CQ,f,l),A.dh(A.aj8(A.bF(A.b([e,B.jQ,s,B.c0,r,B.c_,q,B.jP,p,B.xQ,new A.tv(o,B.f_,l),B.jP,A.bO(n,B.y,B.C,B.t)],d),B.B,B.t),l,B.CP),1)],d),B.y,B.t),B.l,B.z2,g,l,l,l,l,l,l,l,l),new A.W(i,h,i,h))},
+n.push(A.azB(B.E3,B.SK,new A.a9F(a),A.aji(k,k,k,k,k,k,k,k,k,B.e,k,k,k,k,k,k,k,k,k,k)))
+return A.alU(B.F,A.az(k,A.bF(A.b([new A.bC(B.CQ,e,k),A.dh(A.aj8(A.bF(A.b([d,B.jQ,s,B.c0,r,B.c_,q,B.jP,p,B.xQ,new A.tv(o,B.f_,k),B.jP,A.bO(n,B.y,B.C,B.t)],c),B.B,B.t),k,B.CP),1)],c),B.y,B.t),B.l,B.z2,f,k,k,k,k,k,k,k,k),new A.W(h,g,h,g))},
 FE(a,b,c,d,e){var s=null,r=A.b9(12),q=c?B.e:B.F,p=A.b9(12),o=A.pr(b,c?B.k:B.a1,s,18),n=c?B.N:B.H
 return A.px(!1,r,!0,A.al7(A.bO(A.b([o,B.bA,new A.km(1,B.f7,A.am(d,s,B.bC,A.aZ().$3$color$fontSize$fontWeight(c?B.k:B.a1,13,n),s),s)],t.p),B.y,B.rG,B.t),new A.aS(q,s,s,p,s,s,B.w),B.a7,B.CU),s,!0,s,s,s,s,s,s,e,s,s,s)},
 VU(a){var s=null,r=A.b9(16),q=A.cc(B.G,1),p=t.p,o=A.bO(A.b([B.E2,B.jN,A.am("Mobile Engineering & Architecture",s,s,A.e5().$3$color$fontSize$fontWeight(B.e,17,B.N),s)],p),B.y,B.C,B.t),n=A.am(a.x,s,s,A.aZ().$3$color$fontSize$height(B.as,14,1.5),s),m=this.FB("Architecture",a.y),l=A.am("Technologies & Packages:",s,s,A.aZ().$4$color$fontSize$fontWeight$letterSpacing(B.a1,12,B.a8,0.5),s),k=a.z,j=A.U(k).h("a_<1,f>")
@@ -72001,7 +72002,9 @@ A.a9D.prototype={
 $0(){return this.a.m8(this.b.r)},
 $S:0}
 A.a9E.prototype={
-$0(){return this.a.m8(this.b.w)},
+$0(){var s=this.b.w
+s.toString
+return this.a.m8(s)},
 $S:0}
 A.a9F.prototype={
 $0(){var s=this.a
@@ -74779,9 +74782,9 @@ B.kE=new A.aS(B.lm,null,null,null,null,null,B.b8)
 B.Bb=new A.v(0.23529411764705882,0,0,0,B.h)
 B.JF=new A.i(0,4)
 B.zf=new A.cT(0.5,B.c4,B.Bb,B.JF,10)
-B.Gq=A.b(s([B.zf]),t.sq)
+B.Gp=A.b(s([B.zf]),t.sq)
 B.w=new A.Dp(0,"rectangle")
-B.z9=new A.aS(null,null,null,B.kC,B.Gq,null,B.w)
+B.z9=new A.aS(null,null,null,B.kC,B.Gp,null,B.w)
 B.B6=new A.v(1,0.0196078431372549,0.0196078431372549,0.0196078431372549,B.h)
 B.kD=new A.cD(B.hx,B.p,B.p,B.p)
 B.za=new A.aS(B.B6,null,B.kD,null,null,null,B.w)
@@ -75007,7 +75010,7 @@ B.A9=new A.a7E()
 B.af=new A.a7H()
 B.c8=new A.a7J()
 B.dd=new A.Jl(0,0,0,0)
-B.GB=A.b(s([]),A.al("z<Uv>"))
+B.GA=A.b(s([]),A.al("z<Uv>"))
 B.Va=new A.a7O()
 B.aD={}
 B.rL=new A.bm(B.aD,[],t.l)
@@ -75624,8 +75627,8 @@ B.Ev=new A.i_(B.En,!1,0,"png")
 B.El=new A.j4(B.H_,B.Ev,0,"png")
 B.H1=A.b(s([71,73,70,56,55,97]),t.Z)
 B.Ek=new A.j4(B.H1,B.fa,1,"gif87a")
-B.Gk=A.b(s([71,73,70,56,57,97]),t.Z)
-B.Ej=new A.j4(B.Gk,B.fa,2,"gif89a")
+B.Gj=A.b(s([71,73,70,56,57,97]),t.Z)
+B.Ej=new A.j4(B.Gj,B.fa,2,"gif89a")
 B.F1=A.b(s([255,216,255]),t.Z)
 B.Eo=new A.ks(2,"jpeg")
 B.Ez=new A.i_(B.Eo,!1,3,"jpeg")
@@ -75667,49 +75670,18 @@ B.G5=A.b(s([B.ze]),t.sq)
 B.O8=new A.y9(0,"left")
 B.O9=new A.y9(1,"right")
 B.G6=A.b(s([B.O8,B.O9]),A.al("z<y9>"))
-B.GM=A.b(s(["Flutter","Dart","BLoC","Hive","FCM Push Notifications","Dio","Fawaterk SDK"]),t.s)
-B.H8=A.b(s(["Smooth 60 FPS animated micro-interactions for digital code reveals.","Optimized local cache reducing redundant category network queries by 45%.","Biometric authentication and secure token storage for account safety."]),t.s)
-B.F4=A.b(s(["Java","Spring Boot","Spring Security (JWT)","PostgreSQL","Redis","PayTabs / Fawaterk APIs"]),t.s)
-B.FH=A.b(s(["Implemented Redis caching for product catalog, dropping average latency below 50ms.","Idempotent webhook handlers ensuring zero double-charging or missed code deliveries.","Automated database indexing and connection pool optimization under heavy gaming drops."]),t.s)
-B.L8=new A.fS("Shamy Store LLC","High-Volume Gaming E-Commerce Ecosystem","Gaming E-Commerce & Digital Goods","Gamers required sub-second inventory validation, instant digital code fulfillment, and bulletproof payment flows without duplicate charge vulnerabilities or cart race conditions.","Shipped high-converting Flutter mobile app paired with high-throughput Spring Boot services handling rapid flash-sales and real-time inventory allocation.","https://play.google.com/store/apps/details?id=com.shamy.stores","https://apps.apple.com/app/shamy-stores/id1615629161","Engineered the cross-platform Flutter client with intuitive catalog navigation, dynamic cart calculations, instant push notification alerts, and seamless checkout dialogs.","Clean Architecture with BLoC state management, local Hive cache for offline catalog browsing, and robust error-state recovery.",B.GM,B.H8,"Architected RESTful Spring Boot APIs for real-time inventory locking, asynchronous digital key delivery, and webhook processing for Fawaterk and PayTabs.","Spring Boot microservice layer with Redis distributed locks for inventory management and PostgreSQL with ACID transaction boundaries.",B.F4,B.FH)
-B.Hg=A.b(s(["Flutter","Dart","Cubit","SSL Pinning","Secure Storage","Dio","Firebase FCM"]),t.s)
-B.FS=A.b(s(["Flawless Arabic typography with full dynamic bidirectional localization.","Certificate pinning and Root/Jailbreak detection safeguarding state documents.","Instant multi-channel push notification listener with deep-linking to ministry circulars."]),t.s)
-B.GN=A.b(s(["Java","Spring Boot","Spring Security","OAuth2 / JWT","MySQL","Redis Cache"]),t.s)
-B.FU=A.b(s(["Role-Based Access Control (RBAC) separating ministerial hierarchy levels.","Redis cache invalidation strategy ensuring newly published laws broadcast in real time.","High-concurrency query optimization supporting morning clock-in traffic surges."]),t.s)
-B.La=new A.fS("CSC KW (Kuwait Civil Service Commission)","National Government Digital Workplace Platform","Public Sector / Enterprise Government","10,000+ Kuwaiti government civil servants required a reliable, ultra-secure mobile and web interface to view official ministerial announcements, job promotions, salaries, and personnel service requests.","Delivered enterprise-grade platform achieving 99.9% uptime during nationwide announcement releases with instant push alerts and verified security compliance.","https://play.google.com/store/apps/details?id=kw.gov.csc.diwani","https://apps.apple.com/app/csc-kw/id1501718049","Led development of the Flutter government client, ensuring accessibility, multilingual Arabic/English RTL support, and high-readability UI for thousands of state employees.","Strict Clean Architecture separating presentation, domain, and data layers with Cubit state management and certificate pinning.",B.Hg,B.FS,"Built robust Spring Boot backend services delivering real-time announcement feeds, employee directory sync, and automated transactional notification pipelines.","Modular Spring Boot backend integrated with government LDAP/OAuth2 identity providers and MySQL high-availability clusters.",B.GN,B.FU)
-B.GZ=A.b(s(["Flutter","Dart","BLoC","Google Maps API","PDF Viewer","Biometrics","Hive Encrypted"]),t.s)
-B.Gb=A.b(s(["Biometric authentication (Fingerprint / Face ID) safeguarding diagnostic medical files.","Real-time GPS tracking for mobile nurse dispatched home-visit appointments.","Crashlytics error capture integrated with immediate graceful user feedback."]),t.s)
-B.Hc=A.b(s(["Java","Spring Boot","Spring Data JPA","PostgreSQL","AES-256 Encryption","Docker"]),t.s)
-B.GL=A.b(s(["HIPAA-compliant audit logging recording every diagnostic record access and update.","Optimized DB connection pooling and index design handling high-volume morning test uploads.","Secure signed S3 URLs for transient, encrypted patient report downloads."]),t.s)
-B.L6=new A.fS("Smou Care","HIPAA-Aligned Digital Healthcare & Diagnostics","Telehealth & Clinical Diagnostics","Patients needed a secure way to book specialized at-home medical visits, track clinical sample dispatch in real-time, and download encrypted laboratory diagnostic results while strictly observing healthcare privacy regulations.","Launched production healthcare solution connecting clinics, mobile nurses, and patients with zero HIPAA privacy violations and 50% reduction in crash rates.","https://play.google.com/store/apps/details?id=com.smoulabs.app","https://apps.apple.com/app/smou-care/id1639352934","Developed patient Flutter application featuring interactive branch locator maps, dynamic appointment scheduling slots, and encrypted in-app PDF lab result rendering.","Clean Architecture with MVVM + BLoC pattern, encrypted SQLite/Hive local storage, and biometric unlock before displaying lab data.",B.GZ,B.Gb,"Engineered HIPAA-aligned Spring Boot microservices handling encrypted patient health records (EHR), lab instrumentation data exchange, and dispatch schedule slotting.","Spring Boot with Spring Security, AES-256 field-level encryption for sensitive diagnostic results, and PostgreSQL partitioned tables.",B.Hc,B.GL)
-B.FW=A.b(s(["Flutter","Dart","BLoC","WebRTC","Flutter Secure Storage","Dio","FCM"]),t.s)
-B.FX=A.b(s(["Window privacy flags blocking OS task switcher snapshots of therapy notes.","Interactive therapist filter by specialty, clinical modality, and availability slots.","Offline session reminders and mood tracking journal stored locally in secure vault."]),t.s)
-B.FV=A.b(s(["Java","Spring Boot","Spring Security","WebSockets","PostgreSQL","Redis"]),t.s)
-B.Gs=A.b(s(["End-to-end key exchange validation ensuring backend cannot decipher therapist-patient consultations.","Spring Security method-level authorization `@PreAuthorize` guaranteeing absolute therapist-patient isolation.","Automated calendar recurrence engine with timezone-aware appointment reminders."]),t.s)
-B.Lb=new A.fS("MindScape Therapy","End-to-End Encrypted Tele-Psychotherapy System","Mental Health & Secure Consultations","Tele-therapy demands the highest echelon of confidentiality. Patients and licensed psychologists required secure communication, encrypted session notes, and friction-free appointment matching.","Engineered end-to-end encrypted consultation platform providing confidential voice, video, and notes exchange with licensed practitioners.","https://play.google.com/store/apps/details?id=app.mindscape.selfimprovement","https://apps.apple.com/app/mindscape-therapy/id1620000000","Built the Flutter therapy application with calm, soothing user interface aesthetics, session booking calendars, and private consultation portals.","BLoC state management with client-side cryptographic key generation and strict memory hygiene preventing screenshots or clipboard snooping.",B.FW,B.FX,"Implemented Spring Boot backend services facilitating zero-knowledge encrypted messaging, therapist credential verification, and automated recurring session schedules.","Spring Boot API with Spring Security JWT tokens, WebSockets for secure signaling, and PostgreSQL encrypted data partitions.",B.FV,B.Gs)
-B.Gn=A.b(s(["Flutter","Dart","BLoC / Riverpod","Google Maps / Polyline","WebSockets","Geolocator"]),t.s)
-B.Hd=A.b(s(["Smooth polyline route rendering with car heading rotation and live driver progress.","Driver battery optimization throttling GPS polling intelligently based on vehicle motion.","Instant audio-tactile trip dispatch alerts ensuring drivers never miss trip bids."]),t.s)
-B.Gi=A.b(s(["Java","Spring Boot","Redis GEO","RabbitMQ","MySQL","WebSockets","Docker"]),t.s)
-B.GR=A.b(s(["Redis geospatial queries matching nearest 5 drivers in under 15ms.","RabbitMQ decoupled event pipeline preventing server bottlenecks during rush hour spikes.","Driver payout ledger with immutable transaction logs and automated shift reconciliations."]),t.s)
-B.L7=new A.fS("iTO & iTO Captain","Multi-Modal Ride-Hailing, Logistics & Driver Platform","Transportation & Last-Mile Logistics","Coordinating passenger rides, motorcycle courier express delivery, and furniture-moving heavy freight required sub-second geospatial driver matching, transparent trip fare calculations, and resilient real-time driver tracking.","Architected dual-app suite (Rider Client + Driver Captain) operating smoothly across peak city traffic with live telemetry and transparent earnings calculations.","https://play.google.com/store/apps/details?id=com.itosmart.itocaptandriver","https://apps.apple.com/app/ito-smart/id1628100000","Developed both Flutter apps: iTO for consumer trip booking and iTO Captain for drivers with background location broadcasting, turn-by-turn routing, and live earnings dashboards.","Clean Architecture with Riverpod & BLoC state streams, custom battery-optimized location telemetry listener, and resilient WebSocket reconnect logic.",B.Gn,B.Hd,"Designed scalable backend services handling real-time driver coordinate ingestion, geospatial queries, dynamic fare estimation, and driver payout ledgering.","Spring Boot microservices paired with Redis geospatial indexing (`GEOSEARCH`), RabbitMQ message broker for trip distribution, and MySQL transactions.",B.Gi,B.GR)
-B.GK=A.b(s(["Flutter","Dart","BLoC","Mobile Scanner (QR)","Dio","Local Notifications"]),t.s)
-B.G9=A.b(s(["Sub-200ms QR scanner identifying serial numbers and detecting counterfeit equipment.","Visual water filter health gauges with predictive replacement reminder notifications.","Integrated customer service ticketing with direct field technician status updates."]),t.s)
-B.Ga=A.b(s(["Java","Spring Boot","Spring Data JPA","MySQL","Spring Scheduled Tasks","PayTabs"]),t.s)
-B.He=A.b(s(["PCI-DSS compliant payment processing for recurring water filter subscription packages.","Automated scheduled cron jobs evaluating warranty expiration dates and dispatching service alerts.","Query optimization cutting barcode verification response times by 35%."]),t.s)
-B.L9=new A.fS("Puricom Egypt","IoT-Ready Water Purification Equipment & Service Ecosystem","Smart Utilities & Enterprise Field Service","Ensuring genuine filter cartridge authenticity, tracking periodic maintenance schedules for enterprise water systems, and providing instant QR verification across industrial units.","Delivered end-to-end QR/serial verification and automated service contract maintenance booking with PCI-DSS aligned payment handling.","https://play.google.com/store/apps/details?id=com.runprof.puricomegypt","https://apps.apple.com/app/puricom-egypt/id1552554707","Created Flutter client with instant camera QR scanning, warranty status inspection, filter replacement countdown indicators, and technician dispatch booking.","BLoC architecture with camera hardware optimization, localized service history cache, and intuitive step-by-step service request wizards.",B.GK,B.G9,"Built Spring Boot backend APIs managing serialized inventory records, warranty validation rules, automated recurring maintenance jobs, and PCI-DSS payment hooks.","Spring Boot REST APIs with Spring Data JPA, MySQL relational schema with indexing on serial barcodes, and Fawaterk/PayTabs payment adapters.",B.Ga,B.He)
-B.G7=A.b(s([B.L8,B.La,B.L6,B.Lb,B.L7,B.L9]),A.al("z<fS>"))
 B.aT=new A.yl(0,"upstream")
 B.q=new A.yl(1,"downstream")
-B.G8=A.b(s([B.aT,B.q]),A.al("z<yl>"))
+B.G7=A.b(s([B.aT,B.q]),A.al("z<yl>"))
 B.aG=new A.yp(0,"rtl")
 B.ad=new A.yp(1,"ltr")
 B.iQ=A.b(s([B.aG,B.ad]),A.al("z<yp>"))
 B.An=new A.oP(0,"auto")
 B.Ao=new A.oP(1,"full")
 B.Ap=new A.oP(2,"chromium")
-B.Gg=A.b(s([B.An,B.Ao,B.Ap]),A.al("z<oP>"))
+B.Gf=A.b(s([B.An,B.Ao,B.Ap]),A.al("z<oP>"))
 B.aS=new A.ez(1,"fuchsia")
-B.Gl=A.b(s([B.ag,B.aS,B.a9,B.aI,B.aJ,B.aK]),A.al("z<ez>"))
+B.Gk=A.b(s([B.ag,B.aS,B.a9,B.aI,B.aJ,B.aK]),A.al("z<ez>"))
 B.yl=new A.r9(0,"topLeft")
 B.yo=new A.r9(3,"bottomRight")
 B.U9=new A.jJ(B.yl,B.yo)
@@ -75718,51 +75690,82 @@ B.ym=new A.r9(1,"topRight")
 B.yn=new A.r9(2,"bottomLeft")
 B.Ua=new A.jJ(B.ym,B.yn)
 B.Ub=new A.jJ(B.yn,B.ym)
-B.Gm=A.b(s([B.U9,B.Uc,B.Ua,B.Ub]),A.al("z<jJ>"))
-B.Gr=A.b(s([0,0.65,0.9,1]),t.n)
-B.Gu=A.b(s(["click","scroll"]),t.s)
+B.Gl=A.b(s([B.U9,B.Uc,B.Ua,B.Ub]),A.al("z<jJ>"))
+B.Gq=A.b(s([0,0.65,0.9,1]),t.n)
+B.Gt=A.b(s(["click","scroll"]),t.s)
 B.zk=new A.oE()
 B.jr=new A.HY(1,"page")
 B.js=new A.eV(B.P,B.jr)
-B.Gv=A.b(s([B.zk,B.js]),A.al("z<aM>"))
-B.GD=A.b(s([]),t.QP)
+B.Gu=A.b(s([B.zk,B.js]),A.al("z<aM>"))
+B.GC=A.b(s([]),t.QP)
 B.mL=A.b(s([]),A.al("z<aFb>"))
-B.GE=A.b(s([]),t.E)
-B.GG=A.b(s([]),t.fJ)
-B.GH=A.b(s([]),t.ER)
-B.GJ=A.b(s([]),t.tc)
+B.GD=A.b(s([]),t.E)
+B.GF=A.b(s([]),t.fJ)
+B.GG=A.b(s([]),t.ER)
+B.GI=A.b(s([]),t.tc)
 B.fg=A.b(s([]),t.jl)
-B.GA=A.b(s([]),t.wi)
-B.Gz=A.b(s([]),A.al("z<anm<@>>"))
+B.Gz=A.b(s([]),t.wi)
+B.Gy=A.b(s([]),A.al("z<anm<@>>"))
 B.iS=A.b(s([]),t.AO)
-B.GC=A.b(s([]),t.D1)
+B.GB=A.b(s([]),t.D1)
 B.iR=A.b(s([]),t.QF)
 B.mJ=A.b(s([]),t.s)
-B.GF=A.b(s([]),t.Lx)
-B.GI=A.b(s([]),t.p)
-B.Gx=A.b(s([]),t.t)
+B.GE=A.b(s([]),t.Lx)
+B.GH=A.b(s([]),t.p)
+B.Gw=A.b(s([]),t.t)
 B.mK=A.b(s([]),t.ee)
-B.Gy=A.b(s([]),t.XS)
+B.Gx=A.b(s([]),t.XS)
 B.mM=A.b(s([B.dN,B.iI,B.iJ,B.n,B.H,B.a8,B.N,B.dO,B.dP]),A.al("z<et>"))
 B.JD=new A.i(0,2)
 B.zd=new A.cT(0.75,B.c4,B.l4,B.JD,1.5)
-B.GS=A.b(s([B.zd]),t.sq)
+B.GR=A.b(s([B.zd]),t.sq)
 B.FD=A.b(s(["Architected and delivered enterprise-grade Flutter applications and companion Spring Boot backend APIs serving 1,000+ clients.","Improved backend system throughput and mobile app efficiency by 35% through Redis caching, query optimization, connection pooling (HikariCP), and intelligent local caching.","Owned end-to-end architectural decisions related to scalability, mobile-backend contract design, security, and SOLID principles.","Mentored junior and mid-level engineers through structured code reviews and TDD practices, slashing bug regression rates by 25%.","Directed Agile sprint planning and backlog refinement across cross-functional teams, hitting a 95% on-time sprint completion rate.","Leveraged AI-assisted development tooling (Claude, GitHub Copilot) to accelerate delivery velocity and automate review pipelines."]),t.s)
-B.Gj=A.b(s(["Flutter","Dart","Java","Spring Boot","Spring Security","Redis","Clean Architecture","Docker"]),t.s)
-B.D9=new A.mq("Senior Software Engineer (Mobile & Backend Systems)","Beshara Group","Jun 2025 \u2013 Present",B.FD,B.Gj)
+B.Gi=A.b(s(["Flutter","Dart","Java","Spring Boot","Spring Security","Redis","Clean Architecture","Docker"]),t.s)
+B.D9=new A.mq("Senior Software Engineer (Mobile & Backend Systems)","Beshara Group","Jun 2025 \u2013 Present",B.FD,B.Gi)
 B.FF=A.b(s(["Engineered and maintained production Flutter mobile apps and Spring Boot microservices for HIPAA-aligned healthcare platforms supporting 1,000+ active users.","Reduced technical debt by 20% by refactoring core modules into Clean Architecture layers and enforcing strict code quality benchmarks.","Cut mobile crash rates and API fault rates by 50% via strengthened error boundaries, Crashlytics monitoring, and robust authorization controls.","Implemented lab data exchange APIs with field-level encryption safeguarding sensitive patient medical records."]),t.s)
-B.GW=A.b(s(["Java","Spring Boot","Flutter","HIPAA Security","PostgreSQL","TDD","Crashlytics"]),t.s)
-B.D8=new A.mq("Senior Software Engineer (Healthcare Domain)","National Technology","Jun 2024 \u2013 Jun 2025",B.FF,B.GW)
+B.GV=A.b(s(["Java","Spring Boot","Flutter","HIPAA Security","PostgreSQL","TDD","Crashlytics"]),t.s)
+B.D8=new A.mq("Senior Software Engineer (Healthcare Domain)","National Technology","Jun 2024 \u2013 Jun 2025",B.FF,B.GV)
 B.Hb=A.b(s(["Developed 5+ cross-platform mobile applications integrating GraphQL, Kotlin-based Android modules, and Spring Boot REST APIs.","Implemented JWT authentication and OAuth2 authorization flows across mobile and backend, boosting security compliance by 30%.","Reduced API response times by 35% through SQL query optimization, Redis cache layers, and database connection pooling.","Backed all feature releases with unit, widget, and integration test coverage (JUnit/Mockito, Flutter test), achieving 90% on-time delivery.","Achieved a 40% improvement in mobile application efficiency through optimized API calls and local caching (Hive/SQLite)."]),t.s)
 B.FR=A.b(s(["Flutter","Java","Spring Boot","OAuth2","JWT","Redis","GraphQL","Kotlin Native","JUnit/Mockito"]),t.s)
 B.Da=new A.mq("Software Engineer (Mobile & Backend)","RunProf LLC","Feb 2023 \u2013 Jun 2024",B.Hb,B.FR)
 B.F3=A.b(s(["Integrated HyperPay payment gateway into Flutter mobile apps and Spring Boot backend services with strict PCI-DSS aligned security.","Reduced overall application load times by 35% through mobile rendering optimizations and efficient database query refactoring.","Delivered 2 custom enterprise applications end-to-end: from UI/UX design, API modeling, and security testing through App Store and Google Play deployment."]),t.s)
-B.Gt=A.b(s(["Flutter","Java","Spring Boot","HyperPay","PCI-DSS","REST APIs","MySQL"]),t.s)
-B.D7=new A.mq("Software Engineer","Alareeb Information & Communication Company","Feb 2022 \u2013 Feb 2023",B.F3,B.Gt)
-B.GX=A.b(s([B.D9,B.D8,B.Da,B.D7]),A.al("z<mq>"))
+B.Gs=A.b(s(["Flutter","Java","Spring Boot","HyperPay","PCI-DSS","REST APIs","MySQL"]),t.s)
+B.D7=new A.mq("Software Engineer","Alareeb Information & Communication Company","Feb 2022 \u2013 Feb 2023",B.F3,B.Gs)
+B.GW=A.b(s([B.D9,B.D8,B.Da,B.D7]),A.al("z<mq>"))
+B.GL=A.b(s(["Flutter","Dart","BLoC","Hive","FCM Push Notifications","Dio","Fawaterk SDK"]),t.s)
+B.H8=A.b(s(["Smooth 60 FPS animated micro-interactions for digital code reveals.","Optimized local cache reducing redundant category network queries by 45%.","Biometric authentication and secure token storage for account safety."]),t.s)
+B.F4=A.b(s(["Java","Spring Boot","Spring Security (JWT)","PostgreSQL","Redis","PayTabs / Fawaterk APIs"]),t.s)
+B.FH=A.b(s(["Implemented Redis caching for product catalog, dropping average latency below 50ms.","Idempotent webhook handlers ensuring zero double-charging or missed code deliveries.","Automated database indexing and connection pool optimization under heavy gaming drops."]),t.s)
+B.L9=new A.fS("Shamy Store LLC","High-Volume Gaming E-Commerce Ecosystem","Gaming E-Commerce & Digital Goods","Gamers required sub-second inventory validation, instant digital code fulfillment, and bulletproof payment flows without duplicate charge vulnerabilities or cart race conditions.","Shipped high-converting Flutter mobile app paired with high-throughput Spring Boot services handling rapid flash-sales and real-time inventory allocation.","https://play.google.com/store/apps/details?id=com.shamy.stores","https://apps.apple.com/app/shamy-stores/id1615629161","Engineered the cross-platform Flutter client with intuitive catalog navigation, dynamic cart calculations, instant push notification alerts, and seamless checkout dialogs.","Clean Architecture with BLoC state management, local Hive cache for offline catalog browsing, and robust error-state recovery.",B.GL,B.H8,"Architected RESTful Spring Boot APIs for real-time inventory locking, asynchronous digital key delivery, and webhook processing for Fawaterk and PayTabs.","Spring Boot microservice layer with Redis distributed locks for inventory management and PostgreSQL with ACID transaction boundaries.",B.F4,B.FH)
+B.Hg=A.b(s(["Flutter","Dart","Cubit","SSL Pinning","Secure Storage","Dio","Firebase FCM"]),t.s)
+B.FS=A.b(s(["Flawless Arabic typography with full dynamic bidirectional localization.","Certificate pinning and Root/Jailbreak detection safeguarding state documents.","Instant multi-channel push notification listener with deep-linking to ministry circulars."]),t.s)
+B.GM=A.b(s(["Java","Spring Boot","Spring Security","OAuth2 / JWT","MySQL","Redis Cache"]),t.s)
+B.FU=A.b(s(["Role-Based Access Control (RBAC) separating ministerial hierarchy levels.","Redis cache invalidation strategy ensuring newly published laws broadcast in real time.","High-concurrency query optimization supporting morning clock-in traffic surges."]),t.s)
+B.Lb=new A.fS("CSC KW (Kuwait Civil Service Commission)","National Government Digital Workplace Platform","Public Sector / Enterprise Government","10,000+ Kuwaiti government civil servants required a reliable, ultra-secure mobile and web interface to view official ministerial announcements, job promotions, salaries, and personnel service requests.","Delivered enterprise-grade platform achieving 99.9% uptime during nationwide announcement releases with instant push alerts and verified security compliance.","https://play.google.com/store/apps/details?id=kw.gov.csc.diwani","https://apps.apple.com/app/csc-kw/id1501718049","Led development of the Flutter government client, ensuring accessibility, multilingual Arabic/English RTL support, and high-readability UI for thousands of state employees.","Strict Clean Architecture separating presentation, domain, and data layers with Cubit state management and certificate pinning.",B.Hg,B.FS,"Built robust Spring Boot backend services delivering real-time announcement feeds, employee directory sync, and automated transactional notification pipelines.","Modular Spring Boot backend integrated with government LDAP/OAuth2 identity providers and MySQL high-availability clusters.",B.GM,B.FU)
+B.GZ=A.b(s(["Flutter","Dart","BLoC","Google Maps API","PDF Viewer","Biometrics","Hive Encrypted"]),t.s)
+B.Ga=A.b(s(["Biometric authentication (Fingerprint / Face ID) safeguarding diagnostic medical files.","Real-time GPS tracking for mobile nurse dispatched home-visit appointments.","Crashlytics error capture integrated with immediate graceful user feedback."]),t.s)
+B.Hc=A.b(s(["Java","Spring Boot","Spring Data JPA","PostgreSQL","AES-256 Encryption","Docker"]),t.s)
+B.GK=A.b(s(["HIPAA-compliant audit logging recording every diagnostic record access and update.","Optimized DB connection pooling and index design handling high-volume morning test uploads.","Secure signed S3 URLs for transient, encrypted patient report downloads."]),t.s)
+B.L6=new A.fS("Smou Care","HIPAA-Aligned Digital Healthcare & Diagnostics","Telehealth & Clinical Diagnostics","Patients needed a secure way to book specialized at-home medical visits, track clinical sample dispatch in real-time, and download encrypted laboratory diagnostic results while strictly observing healthcare privacy regulations.","Launched production healthcare solution connecting clinics, mobile nurses, and patients with zero HIPAA privacy violations and 50% reduction in crash rates.","https://play.google.com/store/apps/details?id=com.smoulabs.app","https://apps.apple.com/app/smou-care/id1639352934","Developed patient Flutter application featuring interactive branch locator maps, dynamic appointment scheduling slots, and encrypted in-app PDF lab result rendering.","Clean Architecture with MVVM + BLoC pattern, encrypted SQLite/Hive local storage, and biometric unlock before displaying lab data.",B.GZ,B.Ga,"Engineered HIPAA-aligned Spring Boot microservices handling encrypted patient health records (EHR), lab instrumentation data exchange, and dispatch schedule slotting.","Spring Boot with Spring Security, AES-256 field-level encryption for sensitive diagnostic results, and PostgreSQL partitioned tables.",B.Hc,B.GK)
+B.FW=A.b(s(["Flutter","Dart","BLoC","WebRTC","Flutter Secure Storage","Dio","FCM"]),t.s)
+B.FX=A.b(s(["Window privacy flags blocking OS task switcher snapshots of therapy notes.","Interactive therapist filter by specialty, clinical modality, and availability slots.","Offline session reminders and mood tracking journal stored locally in secure vault."]),t.s)
+B.FV=A.b(s(["Java","Spring Boot","Spring Security","WebSockets","PostgreSQL","Redis"]),t.s)
+B.Gr=A.b(s(["End-to-end key exchange validation ensuring backend cannot decipher therapist-patient consultations.","Spring Security method-level authorization `@PreAuthorize` guaranteeing absolute therapist-patient isolation.","Automated calendar recurrence engine with timezone-aware appointment reminders."]),t.s)
+B.L8=new A.fS("MindScape Therapy","End-to-End Encrypted Tele-Psychotherapy System","Mental Health & Secure Consultations","Tele-therapy demands the highest echelon of confidentiality. Patients and licensed psychologists required secure communication, encrypted session notes, and friction-free appointment matching.","Engineered end-to-end encrypted consultation platform providing confidential voice, video, and notes exchange with licensed practitioners.","https://play.google.com/store/apps/details?id=app.mindscape.selfimprovement",null,"Built the Flutter therapy application with calm, soothing user interface aesthetics, session booking calendars, and private consultation portals.","BLoC state management with client-side cryptographic key generation and strict memory hygiene preventing screenshots or clipboard snooping.",B.FW,B.FX,"Implemented Spring Boot backend services facilitating zero-knowledge encrypted messaging, therapist credential verification, and automated recurring session schedules.","Spring Boot API with Spring Security JWT tokens, WebSockets for secure signaling, and PostgreSQL encrypted data partitions.",B.FV,B.Gr)
+B.Gm=A.b(s(["Flutter","Dart","BLoC / Riverpod","Google Maps / Polyline","WebSockets","Geolocator"]),t.s)
+B.Hd=A.b(s(["Smooth polyline route rendering with car heading rotation and live driver progress.","Driver battery optimization throttling GPS polling intelligently based on vehicle motion.","Instant audio-tactile trip dispatch alerts ensuring drivers never miss trip bids."]),t.s)
+B.Gh=A.b(s(["Java","Spring Boot","Redis GEO","RabbitMQ","MySQL","WebSockets","Docker"]),t.s)
+B.GQ=A.b(s(["Redis geospatial queries matching nearest 5 drivers in under 15ms.","RabbitMQ decoupled event pipeline preventing server bottlenecks during rush hour spikes.","Driver payout ledger with immutable transaction logs and automated shift reconciliations."]),t.s)
+B.L7=new A.fS("iTO & iTO Captain","Multi-Modal Ride-Hailing, Logistics & Driver Platform","Transportation & Last-Mile Logistics","Coordinating passenger rides, motorcycle courier express delivery, and furniture-moving heavy freight required sub-second geospatial driver matching, transparent trip fare calculations, and resilient real-time driver tracking.","Architected dual-app suite (Rider Client + Driver Captain) operating smoothly across peak city traffic with live telemetry and transparent earnings calculations.","https://play.google.com/store/apps/details?id=com.itosmart.itocaptandriver",null,"Developed both Flutter apps: iTO for consumer trip booking and iTO Captain for drivers with background location broadcasting, turn-by-turn routing, and live earnings dashboards.","Clean Architecture with Riverpod & BLoC state streams, custom battery-optimized location telemetry listener, and resilient WebSocket reconnect logic.",B.Gm,B.Hd,"Designed scalable backend services handling real-time driver coordinate ingestion, geospatial queries, dynamic fare estimation, and driver payout ledgering.","Spring Boot microservices paired with Redis geospatial indexing (`GEOSEARCH`), RabbitMQ message broker for trip distribution, and MySQL transactions.",B.Gh,B.GQ)
+B.GJ=A.b(s(["Flutter","Dart","BLoC","Mobile Scanner (QR)","Dio","Local Notifications"]),t.s)
+B.G8=A.b(s(["Sub-200ms QR scanner identifying serial numbers and detecting counterfeit equipment.","Visual water filter health gauges with predictive replacement reminder notifications.","Integrated customer service ticketing with direct field technician status updates."]),t.s)
+B.G9=A.b(s(["Java","Spring Boot","Spring Data JPA","MySQL","Spring Scheduled Tasks","PayTabs"]),t.s)
+B.He=A.b(s(["PCI-DSS compliant payment processing for recurring water filter subscription packages.","Automated scheduled cron jobs evaluating warranty expiration dates and dispatching service alerts.","Query optimization cutting barcode verification response times by 35%."]),t.s)
+B.La=new A.fS("Puricom Egypt","IoT-Ready Water Purification Equipment & Service Ecosystem","Smart Utilities & Enterprise Field Service","Ensuring genuine filter cartridge authenticity, tracking periodic maintenance schedules for enterprise water systems, and providing instant QR verification across industrial units.","Delivered end-to-end QR/serial verification and automated service contract maintenance booking with PCI-DSS aligned payment handling.","https://play.google.com/store/apps/details?id=com.runprof.puricomegypt","https://apps.apple.com/app/puricom-egypt/id1552554707","Created Flutter client with instant camera QR scanning, warranty status inspection, filter replacement countdown indicators, and technician dispatch booking.","BLoC architecture with camera hardware optimization, localized service history cache, and intuitive step-by-step service request wizards.",B.GJ,B.G8,"Built Spring Boot backend APIs managing serialized inventory records, warranty validation rules, automated recurring maintenance jobs, and PCI-DSS payment hooks.","Spring Boot REST APIs with Spring Data JPA, MySQL relational schema with indexing on serial barcodes, and Fawaterk/PayTabs payment adapters.",B.G9,B.He)
+B.GY=A.b(s([B.L9,B.Lb,B.L6,B.L8,B.L7,B.La]),A.al("z<fS>"))
 B.dU=A.b(s([B.c3,B.bl,B.ev,B.ew,B.hu]),t.QP)
-B.Go=A.b(s(["Flutter (iOS & Android)","Dart","BLoC / Cubit","Riverpod","Provider","GetX","Kotlin (Android Native)","Swift (iOS Native)","Local Caching (Hive, SQLite)","GraphQL & WebSockets"]),t.s)
-B.NN=new A.js("Mobile Engineering","mobile",B.Go,"Production Flutter, native iOS/Android bridge, state machines, and high-performance rendering.")
+B.Gn=A.b(s(["Flutter (iOS & Android)","Dart","BLoC / Cubit","Riverpod","Provider","GetX","Kotlin (Android Native)","Swift (iOS Native)","Local Caching (Hive, SQLite)","GraphQL & WebSockets"]),t.s)
+B.NN=new A.js("Mobile Engineering","mobile",B.Gn,"Production Flutter, native iOS/Android bridge, state machines, and high-performance rendering.")
 B.Ha=A.b(s(["Java & Kotlin","Spring Boot & Spring MVC","Spring Security","Spring Data JPA / Hibernate","Redis (Caching & Sessions)","Apache Kafka","RabbitMQ","Connection Pooling (HikariCP)","PostgreSQL, MySQL & MongoDB","Swagger / OpenAPI"]),t.s)
 B.NQ=new A.js("Backend Engineering","server",B.Ha,"Distributed services, transactional integrity, caching strategies, and event streaming.")
 B.H4=A.b(s(["Clean Architecture (Uncle Bob)","SOLID Principles","Microservices & Modular Monoliths","Repository & Factory Patterns","MVVM & MVI","Test-Driven Development (TDD)","Domain-Driven Design (DDD)","API First Design"]),t.s)
@@ -76332,57 +76335,57 @@ B.Fv=A.b(s([54,null,null,8589935158]),t.Z)
 B.Fw=A.b(s([55,null,null,8589935159]),t.Z)
 B.Fx=A.b(s([56,null,null,8589935160]),t.Z)
 B.Fz=A.b(s([57,null,null,8589935161]),t.Z)
-B.Gc=A.b(s([8589934852,8589934852,8589934853,null]),t.Z)
+B.Gb=A.b(s([8589934852,8589934852,8589934853,null]),t.Z)
 B.F7=A.b(s([4294967555,null,4294967555,null]),t.Z)
 B.F8=A.b(s([4294968065,null,null,8589935154]),t.Z)
 B.F9=A.b(s([4294968066,null,null,8589935156]),t.Z)
 B.Fa=A.b(s([4294968067,null,null,8589935158]),t.Z)
 B.Fb=A.b(s([4294968068,null,null,8589935160]),t.Z)
 B.Fg=A.b(s([4294968321,null,null,8589935157]),t.Z)
-B.Gd=A.b(s([8589934848,8589934848,8589934849,null]),t.Z)
+B.Gc=A.b(s([8589934848,8589934848,8589934849,null]),t.Z)
 B.F6=A.b(s([4294967423,null,null,8589935150]),t.Z)
 B.Fc=A.b(s([4294968069,null,null,8589935153]),t.Z)
 B.F5=A.b(s([4294967309,null,null,8589935117]),t.Z)
 B.Fd=A.b(s([4294968070,null,null,8589935159]),t.Z)
 B.Fh=A.b(s([4294968327,null,null,8589935152]),t.Z)
-B.Ge=A.b(s([8589934854,8589934854,8589934855,null]),t.Z)
+B.Gd=A.b(s([8589934854,8589934854,8589934855,null]),t.Z)
 B.Fe=A.b(s([4294968071,null,null,8589935155]),t.Z)
 B.Ff=A.b(s([4294968072,null,null,8589935161]),t.Z)
-B.Gf=A.b(s([8589934850,8589934850,8589934851,null]),t.Z)
-B.rO=new A.cX(["*",B.Fi,"+",B.Fj,"-",B.Fk,".",B.Fl,"/",B.Fm,"0",B.Fn,"1",B.Fo,"2",B.Fq,"3",B.Fs,"4",B.Ft,"5",B.Fu,"6",B.Fv,"7",B.Fw,"8",B.Fx,"9",B.Fz,"Alt",B.Gc,"AltGraph",B.F7,"ArrowDown",B.F8,"ArrowLeft",B.F9,"ArrowRight",B.Fa,"ArrowUp",B.Fb,"Clear",B.Fg,"Control",B.Gd,"Delete",B.F6,"End",B.Fc,"Enter",B.F5,"Home",B.Fd,"Insert",B.Fh,"Meta",B.Ge,"PageDown",B.Fe,"PageUp",B.Ff,"Shift",B.Gf],A.al("cX<A,T<l?>>"))
+B.Ge=A.b(s([8589934850,8589934850,8589934851,null]),t.Z)
+B.rO=new A.cX(["*",B.Fi,"+",B.Fj,"-",B.Fk,".",B.Fl,"/",B.Fm,"0",B.Fn,"1",B.Fo,"2",B.Fq,"3",B.Fs,"4",B.Ft,"5",B.Fu,"6",B.Fv,"7",B.Fw,"8",B.Fx,"9",B.Fz,"Alt",B.Gb,"AltGraph",B.F7,"ArrowDown",B.F8,"ArrowLeft",B.F9,"ArrowRight",B.Fa,"ArrowUp",B.Fb,"Clear",B.Fg,"Control",B.Gc,"Delete",B.F6,"End",B.Fc,"Enter",B.F5,"Home",B.Fd,"Insert",B.Fh,"Meta",B.Gd,"PageDown",B.Fe,"PageUp",B.Ff,"Shift",B.Ge],A.al("cX<A,T<l?>>"))
 B.Fy=A.b(s([B.mU,null,null,B.rA]),t.L)
-B.GO=A.b(s([B.rm,null,null,B.rB]),t.L)
+B.GN=A.b(s([B.rm,null,null,B.rB]),t.L)
 B.FT=A.b(s([B.rn,null,null,B.rC]),t.L)
-B.Gh=A.b(s([B.ro,null,null,B.cg]),t.L)
+B.Gg=A.b(s([B.ro,null,null,B.cg]),t.L)
 B.EZ=A.b(s([B.rp,null,null,B.rD]),t.L)
 B.H2=A.b(s([B.rq,null,null,B.j3]),t.L)
-B.GY=A.b(s([B.rr,null,null,B.e2]),t.L)
+B.GX=A.b(s([B.rr,null,null,B.e2]),t.L)
 B.FG=A.b(s([B.rs,null,null,B.ch]),t.L)
 B.H7=A.b(s([B.rt,null,null,B.e3]),t.L)
-B.GV=A.b(s([B.ru,null,null,B.ci]),t.L)
+B.GU=A.b(s([B.ru,null,null,B.ci]),t.L)
 B.FC=A.b(s([B.rv,null,null,B.j4]),t.L)
 B.F2=A.b(s([B.rw,null,null,B.cj]),t.L)
 B.FP=A.b(s([B.rx,null,null,B.e4]),t.L)
-B.GP=A.b(s([B.ry,null,null,B.ck]),t.L)
-B.GQ=A.b(s([B.rz,null,null,B.e5]),t.L)
+B.GO=A.b(s([B.ry,null,null,B.ck]),t.L)
+B.GP=A.b(s([B.rz,null,null,B.e5]),t.L)
 B.FI=A.b(s([B.e0,B.e0,B.fn,null]),t.L)
 B.H3=A.b(s([B.fj,null,B.fj,null]),t.L)
 B.FY=A.b(s([B.be,null,null,B.ch]),t.L)
 B.FZ=A.b(s([B.b0,null,null,B.ci]),t.L)
 B.G_=A.b(s([B.b1,null,null,B.cj]),t.L)
 B.H6=A.b(s([B.bf,null,null,B.ck]),t.L)
-B.GT=A.b(s([B.iX,null,null,B.j4]),t.L)
+B.GS=A.b(s([B.iX,null,null,B.j4]),t.L)
 B.FJ=A.b(s([B.e_,B.e_,B.fm,null]),t.L)
-B.Gp=A.b(s([B.ar,null,null,B.cg]),t.L)
+B.Go=A.b(s([B.ar,null,null,B.cg]),t.L)
 B.G0=A.b(s([B.cd,null,null,B.e2]),t.L)
 B.FB=A.b(s([B.fi,null,null,B.j2]),t.L)
 B.G1=A.b(s([B.ce,null,null,B.e4]),t.L)
-B.GU=A.b(s([B.iY,null,null,B.j3]),t.L)
+B.GT=A.b(s([B.iY,null,null,B.j3]),t.L)
 B.FK=A.b(s([B.e1,B.e1,B.fo,null]),t.L)
 B.G2=A.b(s([B.dY,null,null,B.e3]),t.L)
-B.Gw=A.b(s([B.dZ,null,null,B.e5]),t.L)
+B.Gv=A.b(s([B.dZ,null,null,B.e5]),t.L)
 B.FL=A.b(s([B.cf,B.cf,B.cR,null]),t.L)
-B.J5=new A.cX(["*",B.Fy,"+",B.GO,"-",B.FT,".",B.Gh,"/",B.EZ,"0",B.H2,"1",B.GY,"2",B.FG,"3",B.H7,"4",B.GV,"5",B.FC,"6",B.F2,"7",B.FP,"8",B.GP,"9",B.GQ,"Alt",B.FI,"AltGraph",B.H3,"ArrowDown",B.FY,"ArrowLeft",B.FZ,"ArrowRight",B.G_,"ArrowUp",B.H6,"Clear",B.GT,"Control",B.FJ,"Delete",B.Gp,"End",B.G0,"Enter",B.FB,"Home",B.G1,"Insert",B.GU,"Meta",B.FK,"PageDown",B.G2,"PageUp",B.Gw,"Shift",B.FL],A.al("cX<A,T<e?>>"))
+B.J5=new A.cX(["*",B.Fy,"+",B.GN,"-",B.FT,".",B.Gg,"/",B.EZ,"0",B.H2,"1",B.GX,"2",B.FG,"3",B.H7,"4",B.GU,"5",B.FC,"6",B.F2,"7",B.FP,"8",B.GO,"9",B.GP,"Alt",B.FI,"AltGraph",B.H3,"ArrowDown",B.FY,"ArrowLeft",B.FZ,"ArrowRight",B.G_,"ArrowUp",B.H6,"Clear",B.GS,"Control",B.FJ,"Delete",B.Go,"End",B.G0,"Enter",B.FB,"Home",B.G1,"Insert",B.GT,"Meta",B.FK,"PageDown",B.G2,"PageUp",B.Gv,"Shift",B.FL],A.al("cX<A,T<e?>>"))
 B.Jx={KeyA:0,KeyB:1,KeyC:2,KeyD:3,KeyE:4,KeyF:5,KeyG:6,KeyH:7,KeyI:8,KeyJ:9,KeyK:10,KeyL:11,KeyM:12,KeyN:13,KeyO:14,KeyP:15,KeyQ:16,KeyR:17,KeyS:18,KeyT:19,KeyU:20,KeyV:21,KeyW:22,KeyX:23,KeyY:24,KeyZ:25,Digit1:26,Digit2:27,Digit3:28,Digit4:29,Digit5:30,Digit6:31,Digit7:32,Digit8:33,Digit9:34,Digit0:35,Minus:36,Equal:37,BracketLeft:38,BracketRight:39,Backslash:40,Semicolon:41,Quote:42,Backquote:43,Comma:44,Period:45,Slash:46}
 B.rP=new A.bm(B.Jx,["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","-","=","[","]","\\",";","'","`",",",".","/"],t.l)
 B.Jt={Abort:0,Again:1,AltLeft:2,AltRight:3,ArrowDown:4,ArrowLeft:5,ArrowRight:6,ArrowUp:7,AudioVolumeDown:8,AudioVolumeMute:9,AudioVolumeUp:10,Backquote:11,Backslash:12,Backspace:13,BracketLeft:14,BracketRight:15,BrightnessDown:16,BrightnessUp:17,BrowserBack:18,BrowserFavorites:19,BrowserForward:20,BrowserHome:21,BrowserRefresh:22,BrowserSearch:23,BrowserStop:24,CapsLock:25,Comma:26,ContextMenu:27,ControlLeft:28,ControlRight:29,Convert:30,Copy:31,Cut:32,Delete:33,Digit0:34,Digit1:35,Digit2:36,Digit3:37,Digit4:38,Digit5:39,Digit6:40,Digit7:41,Digit8:42,Digit9:43,DisplayToggleIntExt:44,Eject:45,End:46,Enter:47,Equal:48,Escape:49,Esc:50,F1:51,F10:52,F11:53,F12:54,F13:55,F14:56,F15:57,F16:58,F17:59,F18:60,F19:61,F2:62,F20:63,F21:64,F22:65,F23:66,F24:67,F3:68,F4:69,F5:70,F6:71,F7:72,F8:73,F9:74,Find:75,Fn:76,FnLock:77,GameButton1:78,GameButton10:79,GameButton11:80,GameButton12:81,GameButton13:82,GameButton14:83,GameButton15:84,GameButton16:85,GameButton2:86,GameButton3:87,GameButton4:88,GameButton5:89,GameButton6:90,GameButton7:91,GameButton8:92,GameButton9:93,GameButtonA:94,GameButtonB:95,GameButtonC:96,GameButtonLeft1:97,GameButtonLeft2:98,GameButtonMode:99,GameButtonRight1:100,GameButtonRight2:101,GameButtonSelect:102,GameButtonStart:103,GameButtonThumbLeft:104,GameButtonThumbRight:105,GameButtonX:106,GameButtonY:107,GameButtonZ:108,Help:109,Home:110,Hyper:111,Insert:112,IntlBackslash:113,IntlRo:114,IntlYen:115,KanaMode:116,KeyA:117,KeyB:118,KeyC:119,KeyD:120,KeyE:121,KeyF:122,KeyG:123,KeyH:124,KeyI:125,KeyJ:126,KeyK:127,KeyL:128,KeyM:129,KeyN:130,KeyO:131,KeyP:132,KeyQ:133,KeyR:134,KeyS:135,KeyT:136,KeyU:137,KeyV:138,KeyW:139,KeyX:140,KeyY:141,KeyZ:142,KeyboardLayoutSelect:143,Lang1:144,Lang2:145,Lang3:146,Lang4:147,Lang5:148,LaunchApp1:149,LaunchApp2:150,LaunchAssistant:151,LaunchControlPanel:152,LaunchMail:153,LaunchScreenSaver:154,MailForward:155,MailReply:156,MailSend:157,MediaFastForward:158,MediaPause:159,MediaPlay:160,MediaPlayPause:161,MediaRecord:162,MediaRewind:163,MediaSelect:164,MediaStop:165,MediaTrackNext:166,MediaTrackPrevious:167,MetaLeft:168,MetaRight:169,MicrophoneMuteToggle:170,Minus:171,NonConvert:172,NumLock:173,Numpad0:174,Numpad1:175,Numpad2:176,Numpad3:177,Numpad4:178,Numpad5:179,Numpad6:180,Numpad7:181,Numpad8:182,Numpad9:183,NumpadAdd:184,NumpadBackspace:185,NumpadClear:186,NumpadClearEntry:187,NumpadComma:188,NumpadDecimal:189,NumpadDivide:190,NumpadEnter:191,NumpadEqual:192,NumpadMemoryAdd:193,NumpadMemoryClear:194,NumpadMemoryRecall:195,NumpadMemoryStore:196,NumpadMemorySubtract:197,NumpadMultiply:198,NumpadParenLeft:199,NumpadParenRight:200,NumpadSubtract:201,Open:202,PageDown:203,PageUp:204,Paste:205,Pause:206,Period:207,Power:208,PrintScreen:209,PrivacyScreenToggle:210,Props:211,Quote:212,Resume:213,ScrollLock:214,Select:215,SelectTask:216,Semicolon:217,ShiftLeft:218,ShiftRight:219,ShowAllWindows:220,Slash:221,Sleep:222,Space:223,Super:224,Suspend:225,Tab:226,Turbo:227,Undo:228,WakeUp:229,ZoomToggle:230}
