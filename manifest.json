@@ -1,11 +1,11 @@
 {
-    "name": "portofolio",
-    "short_name": "portofolio",
+    "name": "Eslam Hegazy | Senior Software Engineer",
+    "short_name": "Eslam Hegazy",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "description": "Senior Software Engineer specializing in high-performance Flutter mobile apps and scalable Java Spring Boot backend systems.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
