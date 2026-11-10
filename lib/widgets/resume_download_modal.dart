@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../theme/app_theme.dart';
+import '../utils/download_helper.dart';
 
 class ResumeDownloadModal extends StatelessWidget {
   const ResumeDownloadModal({super.key});
@@ -15,14 +15,34 @@ class ResumeDownloadModal extends StatelessWidget {
   }
 
   Future<void> _downloadResume(BuildContext context, String url, String filename) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.platformDefault);
-    } else {
+    try {
+      await downloadPdfAsset(url, filename);
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Could not open resume at $url'),
+            content: Row(
+              children: [
+                const Icon(Icons.check_circle_rounded, color: AppTheme.springGreen, size: 20),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    'Downloading $filename...',
+                    style: GoogleFonts.inter(color: Colors.white, fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ],
+            ),
+            backgroundColor: const Color(0xFF1E293B),
+            duration: const Duration(seconds: 3),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Failed to download resume: $e'),
             backgroundColor: Colors.redAccent,
           ),
         );

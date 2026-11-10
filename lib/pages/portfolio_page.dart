@@ -1083,18 +1083,27 @@ class _PortfolioPageState extends State<PortfolioPage> {
   // ==========================================
   Widget _buildProjectsSection(bool isDesktop, bool isTablet) {
     final filteredProjects = PortfolioData.featuredProjects.where((p) {
+      final domain = p.domain.toLowerCase();
       if (_activeProjectTab == 'fintech') {
-        return p.domain.toLowerCase().contains('commerce') ||
-            p.domain.toLowerCase().contains('payment');
+        return domain.contains('commerce') ||
+            domain.contains('payment') ||
+            domain.contains('travel') ||
+            domain.contains('hospitality');
       }
       if (_activeProjectTab == 'healthcare') {
-        return p.domain.toLowerCase().contains('health') ||
-            p.domain.toLowerCase().contains('mental');
+        return domain.contains('health') ||
+            domain.contains('mental') ||
+            domain.contains('clinical') ||
+            domain.contains('pharmacology');
       }
       if (_activeProjectTab == 'enterprise') {
-        return p.domain.toLowerCase().contains('government') ||
-            p.domain.toLowerCase().contains('logistics') ||
-            p.domain.toLowerCase().contains('utilities');
+        return domain.contains('government') ||
+            domain.contains('logistics') ||
+            domain.contains('utilities') ||
+            domain.contains('transport') ||
+            domain.contains('community') ||
+            domain.contains('real estate') ||
+            domain.contains('sports');
       }
       return true;
     }).toList();
@@ -1127,7 +1136,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                   _filterButton('All Projects', 'all'),
                   _filterButton('FinTech & E-Commerce', 'fintech'),
                   _filterButton('Healthcare & Clinical', 'healthcare'),
-                  _filterButton('Enterprise & Government', 'enterprise'),
+                  _filterButton('Enterprise, Gov & Mobility', 'enterprise'),
                 ],
               ),
               const SizedBox(height: 36),

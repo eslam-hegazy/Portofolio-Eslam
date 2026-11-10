@@ -191,33 +191,40 @@ class _CaseStudyModalState extends State<CaseStudyModal> {
                     ),
 
                     const SizedBox(height: 28),
-                    Row(
+                    Wrap(
+                      spacing: 12,
+                      runSpacing: 12,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      alignment: WrapAlignment.spaceBetween,
                       children: [
-                        if (p.googlePlayUrl != null)
-                          OutlinedButton.icon(
-                            onPressed: () => _launchUrl(p.googlePlayUrl!),
-                            icon: const FaIcon(FontAwesomeIcons.googlePlay, size: 14),
-                            label: const Text('Google Play'),
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: AppTheme.white,
-                              side: const BorderSide(color: AppTheme.borderLight),
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                            ),
-                          ),
-                        if (p.googlePlayUrl != null && p.appStoreUrl != null)
-                          const SizedBox(width: 12),
-                        if (p.appStoreUrl != null)
-                          OutlinedButton.icon(
-                            onPressed: () => _launchUrl(p.appStoreUrl!),
-                            icon: const FaIcon(FontAwesomeIcons.appStoreIos, size: 16),
-                            label: const Text('App Store'),
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: AppTheme.white,
-                              side: const BorderSide(color: AppTheme.borderLight),
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                            ),
-                          ),
-                        const Spacer(),
+                        Wrap(
+                          spacing: 10,
+                          runSpacing: 10,
+                          children: [
+                            if (p.googlePlayUrl != null)
+                              OutlinedButton.icon(
+                                onPressed: () => _launchUrl(p.googlePlayUrl!),
+                                icon: const FaIcon(FontAwesomeIcons.googlePlay, size: 14),
+                                label: const Text('Google Play'),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: AppTheme.white,
+                                  side: const BorderSide(color: AppTheme.borderLight),
+                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                ),
+                              ),
+                            if (p.appStoreUrl != null)
+                              OutlinedButton.icon(
+                                onPressed: () => _launchUrl(p.appStoreUrl!),
+                                icon: const FaIcon(FontAwesomeIcons.appStoreIos, size: 16),
+                                label: const Text('App Store'),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: AppTheme.white,
+                                  side: const BorderSide(color: AppTheme.borderLight),
+                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                ),
+                              ),
+                          ],
+                        ),
                         TextButton.icon(
                           onPressed: () {
                             Navigator.of(context).pop();
