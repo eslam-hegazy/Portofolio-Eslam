@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:portofolio/data/portfolio_data.dart';
+import 'package:portfolio/data/portfolio_data.dart';
 
 void main() {
   group('PortfolioData Integrity Tests', () {

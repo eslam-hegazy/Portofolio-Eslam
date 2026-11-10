@@ -178,51 +178,55 @@ class _PortfolioPageState extends State<PortfolioPage> {
           // Brand Logo with User Avatar / Initials
           Flexible(
             child: InkWell(
-            onTap: () => _scrollToKey(_heroKey),
-            borderRadius: BorderRadius.circular(12),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  width: screenWidth < 400 ? 38 : 44,
-                  height: screenWidth < 400 ? 38 : 44,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: AppTheme.white, width: 1.5),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/eslam_hegazy.jpg'),
-                      fit: BoxFit.cover,
+              onTap: () => _scrollToKey(_heroKey),
+              borderRadius: BorderRadius.circular(12),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: screenWidth < 400 ? 38 : 44,
+                    height: screenWidth < 400 ? 38 : 44,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: AppTheme.white, width: 1.5),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/eslam_hegazy.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      PortfolioData.name,
-                      style: GoogleFonts.outfit(
-                        fontSize: screenWidth < 400 ? 16 : 18,
-                        fontWeight: FontWeight.bold,
-                        color: AppTheme.textPrimary,
-                        letterSpacing: -0.3,
-                      ),
-                    ),
-                    if (screenWidth >= 360)
-                      Text(
-                        'Senior Software Engineer',
-                        style: GoogleFonts.inter(
-                          fontSize: screenWidth < 400 ? 10 : 11,
-                          color: AppTheme.textMuted,
-                          fontWeight: FontWeight.w500,
+                  const SizedBox(width: 12),
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          PortfolioData.name,
+                          style: GoogleFonts.outfit(
+                            fontSize: screenWidth < 400 ? 16 : 18,
+                            fontWeight: FontWeight.bold,
+                            color: AppTheme.textPrimary,
+                            letterSpacing: -0.3,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                  ],
-                ),
-              ],
+                        if (screenWidth >= 360)
+                          Text(
+                            'Senior Software Engineer',
+                            style: GoogleFonts.inter(
+                              fontSize: screenWidth < 400 ? 10 : 11,
+                              color: AppTheme.textMuted,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
           ), // end Flexible (brand logo)
 
           const Spacer(),
@@ -886,27 +890,27 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   Widget _buildSpecializationTag(String text, Color accentColor) {
-    return IntrinsicWidth(
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        decoration: BoxDecoration(
-          color: AppTheme.surfaceElevated,
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: AppTheme.borderLight),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 6,
-              height: 6,
-              decoration: BoxDecoration(
-                color: accentColor,
-                shape: BoxShape.circle,
-              ),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: AppTheme.surfaceElevated,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppTheme.borderLight),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 6,
+            height: 6,
+            decoration: BoxDecoration(
+              color: accentColor,
+              shape: BoxShape.circle,
             ),
-            const SizedBox(width: 8),
-            Text(
+          ),
+          const SizedBox(width: 8),
+          Flexible(
+            child: Text(
               text,
               style: GoogleFonts.inter(
                 fontSize: 12,
@@ -915,8 +919,8 @@ class _PortfolioPageState extends State<PortfolioPage> {
               ),
               overflow: TextOverflow.ellipsis,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
