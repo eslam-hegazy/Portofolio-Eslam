@@ -65,7 +65,10 @@ class _CaseStudyModalState extends State<CaseStudyModal> {
         vertical: isMobile ? 24 : 32,
       ),
       child: Container(
-        constraints: const BoxConstraints(maxWidth: 860, maxHeight: 720),
+        constraints: BoxConstraints(
+          maxWidth: 860,
+          maxHeight: MediaQuery.of(context).size.height * 0.9,
+        ),
         decoration: AppTheme.glassBox(
           color: const Color(0xFF0F0F0F),
           borderColor: AppTheme.borderLight,
@@ -161,7 +164,7 @@ class _CaseStudyModalState extends State<CaseStudyModal> {
                           Expanded(
                             child: _buildPerspectiveTab(
                               isActive: !_showBackend,
-                              label: 'Mobile Perspective (Flutter)',
+                              label: isMobile ? 'Mobile (Flutter)' : 'Mobile Perspective (Flutter)',
                               icon: Icons.phone_android_rounded,
                               accentColor: AppTheme.mobileCyan,
                               onTap: () => setState(() => _showBackend = false),
@@ -171,7 +174,7 @@ class _CaseStudyModalState extends State<CaseStudyModal> {
                           Expanded(
                             child: _buildPerspectiveTab(
                               isActive: _showBackend,
-                              label: 'Backend Perspective (Java / Spring)',
+                              label: isMobile ? 'Backend (Java Spring)' : 'Backend Perspective (Java / Spring)',
                               icon: Icons.dns_rounded,
                               accentColor: AppTheme.backendEmerald,
                               onTap: () => setState(() => _showBackend = true),

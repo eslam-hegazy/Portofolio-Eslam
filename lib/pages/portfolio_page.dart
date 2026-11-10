@@ -15,6 +15,7 @@ class PortfolioPage extends StatefulWidget {
 }
 
 class _PortfolioPageState extends State<PortfolioPage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final ScrollController _scrollController = ScrollController();
 
   final GlobalKey _heroKey = GlobalKey();
@@ -78,7 +79,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
     final isTablet = screenWidth >= 640 && screenWidth < 1024;
 
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: AppTheme.background,
+      endDrawer: isDesktop ? null : _buildMobileDrawer(context),
       body: Stack(
         children: [
           // Ambient Minimal Glows (Subtle monochrome contrast)
@@ -124,7 +127,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
               child: Column(
                 children: [
                   const SizedBox(height: 90), // Fixed navbar spacing
-                  _buildHeroSection(isDesktop, isTablet),
+                  _buildHeroSection(isDesktop, isTablet, screenWidth),
                   _buildAboutSection(isDesktop),
                   _buildExpertiseSection(isDesktop, isTablet),
                   _buildProjectsSection(isDesktop, isTablet),
@@ -142,7 +145,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
             top: 0,
             left: 0,
             right: 0,
-            child: _buildNavigationBar(isDesktop),
+            child: _buildNavigationBar(isDesktop, screenWidth),
           ),
         ],
       ),
@@ -152,12 +155,12 @@ class _PortfolioPageState extends State<PortfolioPage> {
   // ==========================================
   // NAVIGATION BAR
   // ==========================================
-  Widget _buildNavigationBar(bool isDesktop) {
+  Widget _buildNavigationBar(bool isDesktop, double screenWidth) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 250),
       padding: EdgeInsets.symmetric(
-        horizontal: isDesktop ? 60 : 20,
-        vertical: _isScrolled ? 14 : 22,
+        horizontal: isDesktop ? 60 : (screenWidth < 400 ? 12 : 20),
+        vertical: _isScrolled ? 14 : 20,
       ),
       decoration: BoxDecoration(
         color: _isScrolled
@@ -173,14 +176,16 @@ class _PortfolioPageState extends State<PortfolioPage> {
       child: Row(
         children: [
           // Brand Logo with User Avatar / Initials
-          InkWell(
+          Flexible(
+            child: InkWell(
             onTap: () => _scrollToKey(_heroKey),
             borderRadius: BorderRadius.circular(12),
             child: Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  width: 44,
-                  height: 44,
+                  width: screenWidth < 400 ? 38 : 44,
+                  height: screenWidth < 400 ? 38 : 44,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(color: AppTheme.white, width: 1.5),
@@ -190,7 +195,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                     ),
                   ),
                 ),
-                const SizedBox(width: 14),
+                const SizedBox(width: 12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
@@ -198,25 +203,27 @@ class _PortfolioPageState extends State<PortfolioPage> {
                     Text(
                       PortfolioData.name,
                       style: GoogleFonts.outfit(
-                        fontSize: 18,
+                        fontSize: screenWidth < 400 ? 16 : 18,
                         fontWeight: FontWeight.bold,
                         color: AppTheme.textPrimary,
                         letterSpacing: -0.3,
                       ),
                     ),
-                    Text(
-                      'Senior Software Engineer',
-                      style: GoogleFonts.inter(
-                        fontSize: 11,
-                        color: AppTheme.textMuted,
-                        fontWeight: FontWeight.w500,
+                    if (screenWidth >= 360)
+                      Text(
+                        'Senior Software Engineer',
+                        style: GoogleFonts.inter(
+                          fontSize: screenWidth < 400 ? 10 : 11,
+                          color: AppTheme.textMuted,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ],
             ),
           ),
+          ), // end Flexible (brand logo)
 
           const Spacer(),
 
@@ -228,31 +235,215 @@ class _PortfolioPageState extends State<PortfolioPage> {
             _navLink('Approach', () => _scrollToKey(_approachKey)),
             _navLink('Contact', () => _scrollToKey(_contactKey)),
             const SizedBox(width: 16),
+            ElevatedButton.icon(
+              onPressed: () => ResumeDownloadModal.show(context),
+              icon: const Icon(Icons.file_download_outlined, size: 16),
+              label: Text(
+                'Download CV',
+                style: GoogleFonts.inter(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppTheme.white,
+                foregroundColor: AppTheme.background,
+                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                elevation: 0,
+              ),
+            ),
+          ] else ...[
+            if (screenWidth >= 480) ...[
+              ElevatedButton.icon(
+                onPressed: () => ResumeDownloadModal.show(context),
+                icon: const Icon(Icons.file_download_outlined, size: 15),
+                label: Text(
+                  'Download CV',
+                  style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w700),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppTheme.white,
+                  foregroundColor: AppTheme.background,
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  elevation: 0,
+                ),
+              ),
+              const SizedBox(width: 8),
+            ],
+            IconButton(
+              onPressed: () => _scaffoldKey.currentState?.openEndDrawer(),
+              icon: const Icon(Icons.menu_rounded, color: AppTheme.white, size: 24),
+              tooltip: 'Navigation Menu',
+              style: IconButton.styleFrom(
+                backgroundColor: AppTheme.surfaceElevated,
+                padding: const EdgeInsets.all(10),
+                side: const BorderSide(color: AppTheme.borderSubtle),
+              ),
+            ),
           ],
-
-          // Download CV Button (Black & White high contrast)
-          ElevatedButton.icon(
-            onPressed: () => ResumeDownloadModal.show(context),
-            icon: const Icon(Icons.file_download_outlined, size: 16),
-            label: Text(
-              'Download CV',
-              style: GoogleFonts.inter(
-                fontSize: 13,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.white,
-              foregroundColor: AppTheme.background,
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              elevation: 0,
-            ),
-          ),
         ],
       ),
+    );
+  }
+
+  // ==========================================
+  // MOBILE NAVIGATION DRAWER
+  // ==========================================
+  Widget _buildMobileDrawer(BuildContext context) {
+    return Drawer(
+      backgroundColor: const Color(0xFF0A0A0A),
+      surfaceTintColor: Colors.transparent,
+      child: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 20, 16, 16),
+              child: Row(
+                children: [
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: AppTheme.white, width: 1.5),
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/eslam_hegazy.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          PortfolioData.name,
+                          style: GoogleFonts.outfit(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: AppTheme.textPrimary,
+                          ),
+                        ),
+                        Text(
+                          'Senior Software Engineer',
+                          style: GoogleFonts.inter(
+                            fontSize: 11,
+                            color: AppTheme.textMuted,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    icon: const Icon(Icons.close_rounded, color: AppTheme.gray400),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(color: AppTheme.borderSubtle, height: 1),
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                children: [
+                  _drawerItem('About', Icons.person_outline_rounded, () {
+                    Navigator.of(context).pop();
+                    _scrollToKey(_aboutKey);
+                  }),
+                  _drawerItem('Expertise', Icons.code_rounded, () {
+                    Navigator.of(context).pop();
+                    _scrollToKey(_expertiseKey);
+                  }),
+                  _drawerItem('Projects & Case Studies', Icons.dashboard_outlined, () {
+                    Navigator.of(context).pop();
+                    _scrollToKey(_projectsKey);
+                  }),
+                  _drawerItem('Career Timeline', Icons.work_outline_rounded, () {
+                    Navigator.of(context).pop();
+                    _scrollToKey(_experienceKey);
+                  }),
+                  _drawerItem('Engineering Approach', Icons.architecture_rounded, () {
+                    Navigator.of(context).pop();
+                    _scrollToKey(_approachKey);
+                  }),
+                  _drawerItem('Contact & Socials', Icons.mail_outline_rounded, () {
+                    Navigator.of(context).pop();
+                    _scrollToKey(_contactKey);
+                  }),
+                ],
+              ),
+            ),
+            const Divider(color: AppTheme.borderSubtle, height: 1),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    height: 46,
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        ResumeDownloadModal.show(context);
+                      },
+                      icon: const Icon(Icons.file_download_outlined, size: 18),
+                      label: Text(
+                        'Download CV (PDF)',
+                        style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.bold),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppTheme.white,
+                        foregroundColor: AppTheme.background,
+                        elevation: 0,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        onPressed: () => _launchUrl(PortfolioData.githubUrl),
+                        icon: const FaIcon(FontAwesomeIcons.github, size: 18, color: AppTheme.white),
+                        tooltip: 'GitHub',
+                      ),
+                      const SizedBox(width: 8),
+                      IconButton(
+                        onPressed: () => _launchUrl(PortfolioData.linkedinUrl),
+                        icon: const FaIcon(FontAwesomeIcons.linkedinIn, size: 18, color: AppTheme.white),
+                        tooltip: 'LinkedIn',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _drawerItem(String title, IconData icon, VoidCallback onTap) {
+    return ListTile(
+      leading: Icon(icon, color: AppTheme.gray300, size: 20),
+      title: Text(
+        title,
+        style: GoogleFonts.inter(
+          fontSize: 14,
+          fontWeight: FontWeight.w600,
+          color: AppTheme.textPrimary,
+        ),
+      ),
+      trailing: const Icon(Icons.chevron_right_rounded, color: AppTheme.gray500, size: 18),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      onTap: onTap,
     );
   }
 
@@ -280,13 +471,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
   // ==========================================
   // HERO SECTION (With User Photo)
   // ==========================================
-  Widget _buildHeroSection(bool isDesktop, bool isTablet) {
+  Widget _buildHeroSection(bool isDesktop, bool isTablet, double screenWidth) {
     return Container(
       key: _heroKey,
       constraints: const BoxConstraints(minHeight: 740),
       padding: EdgeInsets.symmetric(
-        horizontal: isDesktop ? 80 : 24,
-        vertical: isDesktop ? 60 : 40,
+        horizontal: isDesktop ? 80 : (screenWidth < 400 ? 16 : 24),
+        vertical: isDesktop ? 60 : 36,
       ),
       child: Center(
         child: Container(
@@ -297,7 +488,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                   children: [
                     Expanded(
                       flex: 6,
-                      child: _buildHeroLeftContent(isDesktop, isTablet),
+                      child: _buildHeroLeftContent(isDesktop, isTablet, screenWidth),
                     ),
                     const SizedBox(width: 50),
                     Expanded(flex: 4, child: _buildHeroPhotoCard()),
@@ -306,9 +497,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    _buildHeroPhotoCard(size: 260),
+                    _buildHeroPhotoCard(size: isTablet ? 300 : (screenWidth < 380 ? 220 : 260)),
                     const SizedBox(height: 36),
-                    _buildHeroLeftContent(isDesktop, isTablet),
+                    _buildHeroLeftContent(isDesktop, isTablet, screenWidth),
                   ],
                 ),
         ),
@@ -316,7 +507,8 @@ class _PortfolioPageState extends State<PortfolioPage> {
     );
   }
 
-  Widget _buildHeroLeftContent(bool isDesktop, bool isTablet) {
+  Widget _buildHeroLeftContent(bool isDesktop, bool isTablet, double screenWidth) {
+    final isSmall = screenWidth < 400;
     return Column(
       crossAxisAlignment: isDesktop
           ? CrossAxisAlignment.start
@@ -324,7 +516,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
       children: [
         // Senior Badge
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+          padding: EdgeInsets.symmetric(horizontal: isSmall ? 10 : 14, vertical: 6),
           decoration: BoxDecoration(
             color: AppTheme.surfaceElevated,
             borderRadius: BorderRadius.circular(30),
@@ -343,11 +535,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
               ),
               const SizedBox(width: 8),
               Text(
-                'SENIOR SOFTWARE ENGINEER • 4+ YEARS',
+                isSmall ? 'SENIOR SOFTWARE ENGINEER' : 'SENIOR SOFTWARE ENGINEER • 4+ YEARS',
                 style: GoogleFonts.inter(
-                  fontSize: 11,
+                  fontSize: isSmall ? 10 : 11,
                   fontWeight: FontWeight.w700,
-                  letterSpacing: 1.1,
+                  letterSpacing: isSmall ? 0.8 : 1.1,
                   color: AppTheme.white,
                 ),
               ),
@@ -357,23 +549,29 @@ class _PortfolioPageState extends State<PortfolioPage> {
         const SizedBox(height: 24),
 
         // Hero Title - Bold Black & White with subtle accent mix
-        RichText(
-          textAlign: isDesktop ? TextAlign.start : TextAlign.center,
-          text: TextSpan(
-            style: GoogleFonts.outfit(
-              fontSize: isDesktop ? 54 : (isTablet ? 42 : 32),
-              fontWeight: FontWeight.w800,
-              color: AppTheme.white,
-              height: 1.12,
-              letterSpacing: -1.2,
+        Column(
+          crossAxisAlignment: isDesktop ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Eslam Hegazy',
+              style: GoogleFonts.outfit(
+                fontSize: isDesktop ? 54 : (isTablet ? 42 : (isSmall ? 30 : 36)),
+                fontWeight: FontWeight.w800,
+                color: AppTheme.white,
+                letterSpacing: -1.2,
+              ),
             ),
-            children: [
-              const TextSpan(text: 'Eslam Hegazy\n'),
-              WidgetSpan(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 2,
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 10,
+              runSpacing: 10,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              alignment: isDesktop ? WrapAlignment.start : WrapAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isSmall ? 8 : 12,
+                    vertical: 4,
                   ),
                   decoration: BoxDecoration(
                     color: AppTheme.white,
@@ -382,21 +580,25 @@ class _PortfolioPageState extends State<PortfolioPage> {
                   child: Text(
                     'Senior Flutter Developer',
                     style: GoogleFonts.outfit(
-                      fontSize: isDesktop ? 48 : (isTablet ? 38 : 28),
+                      fontSize: isDesktop ? 34 : (isTablet ? 26 : (isSmall ? 18 : 22)),
                       fontWeight: FontWeight.w900,
                       color: AppTheme.background,
-                      letterSpacing: -1.0,
+                      letterSpacing: -0.6,
                     ),
                   ),
                 ),
-              ),
-              const TextSpan(text: '&\n'),
-              WidgetSpan(
-                child: Container(
-                  margin: const EdgeInsets.only(top: 8),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 2,
+                Text(
+                  '&',
+                  style: GoogleFonts.outfit(
+                    fontSize: isDesktop ? 28 : (isTablet ? 22 : 18),
+                    fontWeight: FontWeight.w700,
+                    color: AppTheme.white,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isSmall ? 8 : 12,
+                    vertical: 4,
                   ),
                   decoration: BoxDecoration(
                     color: const Color(0xFF1E293B),
@@ -406,27 +608,27 @@ class _PortfolioPageState extends State<PortfolioPage> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.dns_rounded,
                         color: AppTheme.backendEmerald,
-                        size: 28,
+                        size: isSmall ? 18 : 22,
                       ),
-                      const SizedBox(width: 8),
+                      const SizedBox(width: 6),
                       Text(
                         'Java Spring Boot',
                         style: GoogleFonts.outfit(
-                          fontSize: isDesktop ? 46 : (isTablet ? 36 : 26),
+                          fontSize: isDesktop ? 32 : (isTablet ? 24 : (isSmall ? 17 : 20)),
                           fontWeight: FontWeight.w800,
                           color: AppTheme.white,
-                          letterSpacing: -1.0,
+                          letterSpacing: -0.6,
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
         const SizedBox(height: 24),
 
@@ -435,7 +637,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
           PortfolioData.heroTagline,
           textAlign: isDesktop ? TextAlign.start : TextAlign.center,
           style: GoogleFonts.inter(
-            fontSize: isDesktop ? 18 : 15,
+            fontSize: isDesktop ? 18 : (isSmall ? 13 : 15),
             color: AppTheme.gray400,
             height: 1.6,
           ),
@@ -648,15 +850,17 @@ class _PortfolioPageState extends State<PortfolioPage> {
                 children: [
                   Row(
                     children: [
-                      Text(
-                        PortfolioData.name,
-                        style: GoogleFonts.outfit(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: AppTheme.textPrimary,
+                      Expanded(
+                        child: Text(
+                          PortfolioData.name,
+                          style: GoogleFonts.outfit(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: AppTheme.textPrimary,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const Spacer(),
                       const Icon(
                         Icons.verified,
                         color: AppTheme.white,
@@ -682,34 +886,37 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   Widget _buildSpecializationTag(String text, Color accentColor) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-      decoration: BoxDecoration(
-        color: AppTheme.surfaceElevated,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: AppTheme.borderLight),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            width: 6,
-            height: 6,
-            decoration: BoxDecoration(
-              color: accentColor,
-              shape: BoxShape.circle,
+    return IntrinsicWidth(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          color: AppTheme.surfaceElevated,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: AppTheme.borderLight),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 6,
+              height: 6,
+              decoration: BoxDecoration(
+                color: accentColor,
+                shape: BoxShape.circle,
+              ),
             ),
-          ),
-          const SizedBox(width: 8),
-          Text(
-            text,
-            style: GoogleFonts.inter(
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-              color: AppTheme.gray300,
+            const SizedBox(width: 8),
+            Text(
+              text,
+              style: GoogleFonts.inter(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: AppTheme.gray300,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -870,26 +1077,28 @@ class _PortfolioPageState extends State<PortfolioPage> {
                 child: Icon(icon, color: accentColor, size: 20),
               ),
               const SizedBox(width: 12),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: GoogleFonts.outfit(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: AppTheme.textPrimary,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: GoogleFonts.outfit(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: AppTheme.textPrimary,
+                      ),
                     ),
-                  ),
-                  Text(
-                    role,
-                    style: GoogleFonts.inter(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: AppTheme.gray400,
+                    Text(
+                      role,
+                      style: GoogleFonts.inter(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: AppTheme.gray400,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
@@ -1498,54 +1707,98 @@ class _PortfolioPageState extends State<PortfolioPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      exp.title,
-                      style: GoogleFonts.outfit(
-                        fontSize: isDesktop ? 20 : 17,
-                        fontWeight: FontWeight.bold,
-                        color: AppTheme.textPrimary,
+          if (isDesktop)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        exp.title,
+                        style: GoogleFonts.outfit(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: AppTheme.textPrimary,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      '${exp.company} • ${exp.location}',
-                      style: GoogleFonts.inter(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                        color: AppTheme.gray300,
+                      const SizedBox(height: 4),
+                      Text(
+                        '${exp.company} • ${exp.location}',
+                        style: GoogleFonts.inter(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: AppTheme.gray300,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 6,
-                ),
-                decoration: BoxDecoration(
-                  color: AppTheme.surfaceElevated,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: AppTheme.borderLight),
-                ),
-                child: Text(
-                  exp.period,
-                  style: GoogleFonts.inter(
-                    fontSize: 11,
-                    fontWeight: FontWeight.w600,
-                    color: AppTheme.white,
+                    ],
                   ),
                 ),
-              ),
-            ],
-          ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppTheme.surfaceElevated,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: AppTheme.borderLight),
+                  ),
+                  child: Text(
+                    exp.period,
+                    style: GoogleFonts.inter(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.white,
+                    ),
+                  ),
+                ),
+              ],
+            )
+          else
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppTheme.surfaceElevated,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: AppTheme.borderLight),
+                  ),
+                  child: Text(
+                    exp.period,
+                    style: GoogleFonts.inter(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  exp.title,
+                  style: GoogleFonts.outfit(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: AppTheme.textPrimary,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  '${exp.company} • ${exp.location}',
+                  style: GoogleFonts.inter(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: AppTheme.gray300,
+                  ),
+                ),
+              ],
+            ),
           const SizedBox(height: 18),
           ...exp.highlights.map(
             (point) => Padding(
@@ -1890,27 +2143,30 @@ class _PortfolioPageState extends State<PortfolioPage> {
           children: [
             Icon(icon, color: AppTheme.white, size: 18),
             const SizedBox(width: 10),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  title,
-                  style: GoogleFonts.inter(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
-                    color: AppTheme.gray400,
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    title,
+                    style: GoogleFonts.inter(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.gray400,
+                    ),
                   ),
-                ),
-                Text(
-                  value,
-                  style: GoogleFonts.inter(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: AppTheme.textPrimary,
+                  Text(
+                    value,
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.inter(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.textPrimary,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
@@ -1960,11 +2216,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
     required String title,
     required String subtitle,
   }) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmall = screenWidth < 400;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+          padding: EdgeInsets.symmetric(horizontal: isSmall ? 10 : 12, vertical: 5),
           decoration: BoxDecoration(
             color: AppTheme.surfaceElevated,
             borderRadius: BorderRadius.circular(20),
@@ -1973,7 +2231,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
           child: Text(
             tag,
             style: GoogleFonts.inter(
-              fontSize: 11,
+              fontSize: isSmall ? 10 : 11,
               fontWeight: FontWeight.w700,
               letterSpacing: 1.1,
               color: AppTheme.white,
@@ -1984,7 +2242,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
         Text(
           title,
           style: GoogleFonts.outfit(
-            fontSize: 32,
+            fontSize: screenWidth < 400 ? 24 : (screenWidth < 640 ? 28 : 32),
             fontWeight: FontWeight.bold,
             color: AppTheme.textPrimary,
             letterSpacing: -0.6,
@@ -1996,7 +2254,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
           child: Text(
             subtitle,
             style: GoogleFonts.inter(
-              fontSize: 15,
+              fontSize: isSmall ? 13 : 15,
               color: AppTheme.gray400,
               height: 1.5,
             ),

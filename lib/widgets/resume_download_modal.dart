@@ -52,12 +52,22 @@ class ResumeDownloadModal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final isSmall = screenWidth < 500;
+
     return Dialog(
       backgroundColor: Colors.transparent,
-      insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+      insetPadding: EdgeInsets.symmetric(
+        horizontal: isSmall ? 16 : 24,
+        vertical: 16,
+      ),
       child: Container(
-        constraints: const BoxConstraints(maxWidth: 620),
-        padding: const EdgeInsets.all(32),
+        constraints: BoxConstraints(
+          maxWidth: 620,
+          maxHeight: screenHeight * 0.9,
+        ),
+        padding: EdgeInsets.all(isSmall ? 20 : 28),
         decoration: AppTheme.glassBox(
           color: const Color(0xFF0F0F0F),
           borderColor: AppTheme.borderLight,
@@ -70,15 +80,19 @@ class ResumeDownloadModal extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
+                  padding: EdgeInsets.all(isSmall ? 10 : 12),
                   decoration: BoxDecoration(
                     color: AppTheme.surfaceElevated,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: AppTheme.borderLight),
                   ),
-                  child: const Icon(Icons.file_download_outlined, color: AppTheme.white, size: 26),
+                  child: Icon(
+                    Icons.file_download_outlined,
+                    color: AppTheme.white,
+                    size: isSmall ? 22 : 26,
+                  ),
                 ),
-                const SizedBox(width: 16),
+                const SizedBox(width: 14),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,16 +100,16 @@ class ResumeDownloadModal extends StatelessWidget {
                       Text(
                         'Download Verified CV',
                         style: GoogleFonts.outfit(
-                          fontSize: 22,
+                          fontSize: isSmall ? 18 : 22,
                           fontWeight: FontWeight.bold,
                           color: AppTheme.textPrimary,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      const SizedBox(height: 2),
                       Text(
                         'Select the curriculum vitae tailored to your engineering opportunity',
                         style: GoogleFonts.inter(
-                          fontSize: 13,
+                          fontSize: isSmall ? 11 : 13,
                           color: AppTheme.gray400,
                         ),
                       ),
@@ -109,42 +123,54 @@ class ResumeDownloadModal extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 28),
+            const SizedBox(height: 20),
 
-            // Option 1: Mobile & Flutter CV
-            _buildOptionCard(
-              context: context,
-              title: 'Senior Mobile Engineer CV (Flutter & Native)',
-              subtitle: 'Tailored for Lead Flutter, Mobile Architecture, Clean Code & App Performance',
-              badge: 'Flutter Specialization',
-              accentColor: AppTheme.mobileCyan,
-              icon: Icons.phone_android_rounded,
-              url: 'assets/resumes/Senior_Flutter_Resume_Eslam_Hegazy.pdf',
-              filename: 'Senior_Flutter_Resume_Eslam_Hegazy.pdf',
-            ),
-            const SizedBox(height: 16),
+            // Flexible Scrollable Body to prevent any viewport overflow
+            Flexible(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Option 1: Mobile & Flutter CV
+                    _buildOptionCard(
+                      context: context,
+                      title: 'Senior Mobile Engineer CV (Flutter & Native)',
+                      subtitle: 'Tailored for Lead Flutter, Mobile Architecture, Clean Code & App Performance',
+                      badge: 'Flutter Specialization',
+                      accentColor: AppTheme.mobileCyan,
+                      icon: Icons.phone_android_rounded,
+                      url: 'assets/resumes/Senior_Flutter_Resume_Eslam_Hegazy.pdf',
+                      filename: 'Senior_Flutter_Resume_Eslam_Hegazy.pdf',
+                      isSmall: isSmall,
+                    ),
+                    const SizedBox(height: 14),
 
-            // Option 2: Java Spring Boot & Backend CV
-            _buildOptionCard(
-              context: context,
-              title: 'Senior Software Engineer CV (Java Spring Boot)',
-              subtitle: 'Tailored for Backend Architecture, Microservices, Security, Redis & High Throughput',
-              badge: 'Backend Specialization',
-              accentColor: AppTheme.backendEmerald,
-              icon: Icons.dns_rounded,
-              url: 'assets/resumes/Software_Engineer_Resume_Eslam_Hegazy.pdf',
-              filename: 'Software_Engineer_Resume_Eslam_Hegazy.pdf',
-            ),
-            const SizedBox(height: 24),
+                    // Option 2: Java Spring Boot & Backend CV
+                    _buildOptionCard(
+                      context: context,
+                      title: 'Senior Software Engineer CV (Java Spring Boot)',
+                      subtitle: 'Tailored for Backend Architecture, Microservices, Security, Redis & High Throughput',
+                      badge: 'Backend Specialization',
+                      accentColor: AppTheme.backendEmerald,
+                      icon: Icons.dns_rounded,
+                      url: 'assets/resumes/Software_Engineer_Resume_Eslam_Hegazy.pdf',
+                      filename: 'Software_Engineer_Resume_Eslam_Hegazy.pdf',
+                      isSmall: isSmall,
+                    ),
+                    const SizedBox(height: 18),
 
-            Center(
-              child: Text(
-                'Both CVs reflect Eslam Hegazy\'s unified 4+ years of cross-functional engineering experience.',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.inter(
-                  fontSize: 12,
-                  color: AppTheme.gray500,
-                  fontStyle: FontStyle.italic,
+                    Center(
+                      child: Text(
+                        'Both CVs reflect Eslam Hegazy\'s unified 4+ years of cross-functional engineering experience.',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.inter(
+                          fontSize: 11,
+                          color: AppTheme.gray500,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -163,6 +189,7 @@ class ResumeDownloadModal extends StatelessWidget {
     required IconData icon,
     required String url,
     required String filename,
+    required bool isSmall,
   }) {
     return Container(
       decoration: BoxDecoration(
@@ -170,7 +197,7 @@ class ResumeDownloadModal extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppTheme.borderLight),
       ),
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(isSmall ? 14 : 18),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -214,7 +241,7 @@ class ResumeDownloadModal extends StatelessWidget {
           Text(
             title,
             style: GoogleFonts.outfit(
-              fontSize: 16,
+              fontSize: isSmall ? 15 : 16,
               fontWeight: FontWeight.w700,
               color: AppTheme.textPrimary,
             ),
@@ -223,7 +250,7 @@ class ResumeDownloadModal extends StatelessWidget {
           Text(
             subtitle,
             style: GoogleFonts.inter(
-              fontSize: 12,
+              fontSize: isSmall ? 11 : 12,
               color: AppTheme.gray400,
               height: 1.4,
             ),
@@ -231,7 +258,7 @@ class ResumeDownloadModal extends StatelessWidget {
           const SizedBox(height: 16),
           SizedBox(
             width: double.infinity,
-            height: 44,
+            height: isSmall ? 40 : 44,
             child: ElevatedButton.icon(
               onPressed: () {
                 _downloadResume(context, url, filename);
